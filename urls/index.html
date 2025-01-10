@@ -4,27 +4,27 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>Tour Management System</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/fontawesome.min.css" rel="stylesheet">
-        <link href="css/brands.min.css" rel="stylesheet">
-        <link href="css/solid.min.css" rel="stylesheet">
-        <link href="css/v4-font-face.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Маршруты - Tour Management System</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
         <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
         <script>hljs.highlightAll();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">Tour Management System</a>
+                <a class="navbar-brand" href="..">Tour Management System</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -35,36 +35,36 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="nav-item">
-                                <a href="docs/index.md" class="nav-link">Home</a>
+                                <a href="../docs/index.md" class="nav-link">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="docs/overview.md" class="nav-link">Overview</a>
+                                <a href="../docs/overview.md" class="nav-link">Overview</a>
                             </li>
                             <li class="nav-item">
-                                <a href="docs/api_reference/models.md" class="nav-link">Endpoints</a>
+                                <a href="../docs/api_reference/models.md" class="nav-link">Endpoints</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="docs/development/models.md" class="dropdown-item">Models</a>
+    <a href="../docs/development/models.md" class="dropdown-item">Models</a>
 </li>
                                     
 <li>
-    <a href="docs/development/views.md" class="dropdown-item">Views</a>
+    <a href="../docs/development/views.md" class="dropdown-item">Views</a>
 </li>
                                     
 <li>
-    <a href="docs/development/templates.md" class="dropdown-item">Templates</a>
+    <a href="../docs/development/templates.md" class="dropdown-item">Templates</a>
 </li>
                                     
 <li>
-    <a href="docs/development/forms.md" class="dropdown-item">Forms</a>
+    <a href="../docs/development/forms.md" class="dropdown-item">Forms</a>
 </li>
                                     
 <li>
-    <a href="docs/development/static_files.md" class="dropdown-item">Static Files</a>
+    <a href="../docs/development/static_files.md" class="dropdown-item">Static Files</a>
 </li>
                                 </ul>
                             </li>
@@ -94,12 +94,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-bs-level="1"><a href="#web-2" class="nav-link">WEB-Программирование домашнее задание 2</a>
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Маршруты</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">Содержание</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -107,16 +103,56 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="web-2">WEB-Программирование домашнее задание 2</h1>
-<p>Лабораторная работа 2. Реализация простого сайта на django.</p>
-<h2 id="_1">Содержание</h2>
-<ul>
-<li><a href="owerview.md">Задание</a></li>
-<li><a href="models/">Модели</a></li>
-<li><a href="forms/">Формы</a></li>
-<li><a href="views/">Представления</a></li>
-<li><a href="urls/">Маршруты</a></li>
-</ul></div>
+<h1 id="_1">Маршруты</h1>
+<pre><code class="language-python">urlpatterns = [
+    # Аутентификация
+    path('register/', views.register, name='register'),
+    path('', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+
+    # Туры
+    path('tours/', views.tour_list, name='tour_list'),
+    path('tours/&lt;int:pk&gt;/', views.tour_detail, name='tour_detail'),
+    path('tours/&lt;int:tour_id&gt;/book/', views.book_tour, name='book_tour'),
+    path('tours/&lt;int:pk&gt;/add_review/', views.add_review, name='add_review'),
+
+    # Бронирования
+    path('my_bookings/', views.my_bookings, name='my_bookings'),
+    path('my_bookings/&lt;int:pk&gt;/edit', BookingUpdateView.as_view(), name='edit_booking'),
+    path('my_bookings/&lt;int:pk&gt;/delete', BookingDeleteView.as_view(), name='delete_booking'),
+    path('bookings/&lt;int:pk&gt;/', BookingDetailView.as_view(), name='booking_detail'),
+
+    # Админ
+    path('add_tour/', views.add_tour, name='add_tour'),
+    path('edit_tour/&lt;int:pk&gt;/', views.edit_tour, name='edit_tour'),
+    path('view_bookings/', views.view_bookings, name='view_bookings'),
+    path('confirm_booking/&lt;int:pk&gt;/', views.confirm_booking, name='confirm_booking'),
+    path('tour_sales_statistics/', views.sold_tours_by_country, name='tour_sales_statistics'),
+]
+</code></pre>
+<p>Аутентификация:
+- register/: Регистрация пользователя.
+- login/: Вход пользователя.
+- logout/: Выход пользователя.
+- 
+Туры:
+- tours/: Список всех туров.
+- tours/<int:pk>/: Детали конкретного тура.
+- tours/<int:tour_id>/book/: Бронирование конкретного тура.
+- tours/<int:pk>/add_review/: Добавление отзыва к туру.
+- 
+Бронирования:
+- my_bookings/: Мои бронирования.
+- my_bookings/<int:pk>/edit: Редактирование бронирования.
+- my_bookings/<int:pk>/delete: Удаление бронирования.
+- bookings/<int:pk>/: Детали конкретного бронирования.
+- 
+Админ:
+- add_tour/: Добавление нового тура.
+- edit_tour/<int:pk>/: Редактирование существующего тура.
+- view_bookings/: Просмотр всех бронирований.
+- confirm_booking/<int:pk>/: Подтверждение бронирования.
+- tour_sales_statistics/: Статистика по продажам туров по странам.</p></div>
             </div>
         </div>
 
@@ -124,13 +160,13 @@
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
-        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js"></script>
-        <script src="search/main.js"></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -195,8 +231,3 @@
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.6.1
-Build Date UTC : 2025-01-10 18:57:19.194359+00:00
--->

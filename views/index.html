@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Представления - Tour Management System</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">Tour Management System</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../docs/index.md" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../docs/overview.md" class="nav-link">Overview</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../docs/api_reference/models.md" class="nav-link">Endpoints</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Development</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../docs/development/models.md" class="dropdown-item">Models</a>
+</li>
+                                    
+<li>
+    <a href="../docs/development/views.md" class="dropdown-item">Views</a>
+</li>
+                                    
+<li>
+    <a href="../docs/development/templates.md" class="dropdown-item">Templates</a>
+</li>
+                                    
+<li>
+    <a href="../docs/development/forms.md" class="dropdown-item">Forms</a>
+</li>
+                                    
+<li>
+    <a href="../docs/development/static_files.md" class="dropdown-item">Static Files</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link">Представления</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">Регистрация</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">Вход в систему</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">Выход из системы</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">Список туров</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_6" class="nav-link">Детали тура</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_7" class="nav-link">Резервирование тура</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_8" class="nav-link">Обновление бронирования</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_9" class="nav-link">Удаление бронирования</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_10" class="nav-link">Детали бронирования</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_11" class="nav-link">Мои бронирования</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_12" class="nav-link">Отзывы</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_13" class="nav-link">Добавление тура</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_14" class="nav-link">Редактирование тура</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_15" class="nav-link">Просмотр бронирований администратором</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_16" class="nav-link">Подтверждение бронирований пользователей</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_17" class="nav-link">Проданные туры по странам</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="_1">Представления</h1>
+<h2 id="_2">Регистрация</h2>
+<pre><code class="language-python">class TravelAgency(models.Model):
+    name = models.CharField(max_length=100)
+    contact_info = models.TextField()
+
+    def __str__(self):
+        return self.name
+</code></pre>
+<p>Отвечает за регистрацию новых пользователей. Перенаправляет на страницу входа.</p>
+<h2 id="_3">Вход в систему</h2>
+<pre><code class="language-python">def login_view(request):
+    if request.method == 'POST':
+        form = AuthenticationForm(data=request.POST)
+        if form.is_valid():
+            user = form.get_user()
+            login(request, user)
+            return redirect('tour_list')
+    else:
+        form = AuthenticationForm()
+    return render(request, 'login.html', {'form': form})
+</code></pre>
+<p>Использует форму аутентификации для входа пользователя. Перенаправляет на страницу отелей.</p>
+<h2 id="_4">Выход из системы</h2>
+<pre><code class="language-python">@login_required
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+</code></pre>
+<p>Перенаправляет на страницу входа. Только для авторизованных пользоватей.</p>
+<h2 id="_5">Список туров</h2>
+<pre><code class="language-python">def tour_list(request):
+    form = TourSearchForm(request.GET)
+    tours = Tour.objects.all()
+
+    if form.is_valid():
+        query = form.cleaned_data['query']
+        if query:
+            # Используем Q для поиска по нескольким полям
+            tours = tours.filter(
+                Q(hotel__icontains=query) |
+                Q(country__icontains=query) |
+                Q(city__icontains=query) |
+                Q(description__icontains=query)
+            )
+
+    paginator = Paginator(tours, 5)
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
+
+    return render(request, 'tour_list.html', {'page_obj': page_obj, 'form': form})
+</code></pre>
+<p>Получает все имеющиеся туры. Так же позволяет совершать поиск по турам (по полям отель, страна, город и описание). Добавляет пагинацию для отображения на странице.</p>
+<h2 id="_6">Детали тура</h2>
+<pre><code class="language-python">def tour_detail(request, pk):
+    tour = get_object_or_404(Tour, pk=pk)
+    nights = (tour.end_date - tour.start_date).days
+    return render(request, 'tour_detail.html', {'tour': tour, 'nights': nights})
+</code></pre>
+<p>Получает детали тура из модели, считает длительность тура.</p>
+<h2 id="_7">Резервирование тура</h2>
+<pre><code class="language-python">@login_required
+def book_tour(request, tour_id):
+    tour = get_object_or_404(Tour, id=tour_id)
+    if request.method == 'POST':
+        form = BookingForm(request.POST, tour=tour)
+        print(form.is_valid())
+        if form.is_valid():
+            booking = form.save(commit=False)
+            booking.tour = tour
+            booking.user = request.user
+            booking.save()
+            print(booking)
+            return redirect('my_bookings')
+    else:
+        form = BookingForm(tour=tour)
+    return render(request, 'book_tour.html', {'form': form, 'tour': tour})
+</code></pre>
+<p>Получает данные из формы, создает бронь на определенный тур и перенаправляет на страницу броней пользователя. Только для авторизованных пользоватей.</p>
+<h2 id="_8">Обновление бронирования</h2>
+<pre><code class="language-python">class BookingUpdateView(UpdateView):
+    model = Booking
+    form_class = BookingForm
+    template_name = 'update_booking.html'
+    success_url = reverse_lazy('my_bookings')
+
+    def get_form_kwargs(self):
+        kwargs = super().get_form_kwargs()
+        kwargs['tour'] = self.object.tour
+        return kwargs
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['title'] = 'Edit Booking'
+        context['total_price'] = self.object.total_price
+        return context
+</code></pre>
+<p>Получает данные из формы и обновляет бронь пользователя. При успехе перенаправляет на страницу броней пользователя.</p>
+<h2 id="_9">Удаление бронирования</h2>
+<pre><code class="language-python">class BookingDeleteView(DeleteView):
+    model = Booking
+    template_name = 'delete_booking.html'
+    success_url = reverse_lazy('my_bookings')
+    title = 'Booking Cancellation'
+</code></pre>
+<p>Удаляет конкретное бронирование. При успехе перенаправляет на страницу бронирований.</p>
+<h2 id="_10">Детали бронирования</h2>
+<pre><code class="language-python">class BookingDetailView(DetailView):
+    model = Booking
+    template_name = 'booking_detail.html'
+    context_object_name = 'booking'
+</code></pre>
+<p>Получает данные о брони.</p>
+<h2 id="_11">Мои бронирования</h2>
+<pre><code class="language-python">@login_required
+def my_bookings(request):
+    bookings = request.user.bookings.all()
+    return render(request, 'my_bookings.html', {'bookings': bookings})
+</code></pre>
+<p>Получает все бронирование определенного пользователя. Только для авторизованных пользователей.</p>
+<h2 id="_12">Отзывы</h2>
+<pre><code class="language-python">@login_required
+def add_review(request, pk):
+    tour = get_object_or_404(Tour, pk=pk)
+    if not request.user.bookings.filter(tour=tour, is_confirmed=True).exists():
+        return redirect('my_bookings', pk=pk)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.user = request.user
+            review.tour = tour
+            review.save()
+            return redirect('tour_detail', pk=pk)
+    else:
+        form = ReviewForm()
+    return render(request, 'add_review.html', {'form': form, 'tour': tour})
+</code></pre>
+<p>Создает отзыв на подтвержденную бронь. Только для авторизованных пользователей.</p>
+<h2 id="_13">Добавление тура</h2>
+<pre><code class="language-python">@admin_required
+def add_tour(request):
+    if request.method == 'POST':
+        form = TourForm(request.POST)
+
+        if form.is_valid():
+            # Сохранение тура перед обработкой формсетов
+            tour = form.save(commit=False)
+            tour.save()
+
+            # Привязываем сохранённый тур к формсетам
+            tariff_formset = TariffFormSet(request.POST, instance=tour)
+            meal_option_formset = MealOptionFormSet(request.POST, instance=tour)
+
+            if tariff_formset.is_valid() and meal_option_formset.is_valid():
+                tariff_formset.save()
+                meal_option_formset.save()
+                return redirect('tour_list')
+        else:
+            # Создание пустых формсетов при ошибке в основной форме
+            tariff_formset = TariffFormSet(instance=form.instance)
+            meal_option_formset = MealOptionFormSet(instance=form.instance)
+    else:
+        # Инициализация пустых форм
+        form = TourForm()
+        tariff_formset = TariffFormSet(instance=Tour())
+        meal_option_formset = MealOptionFormSet(instance=Tour())
+
+    return render(request, 'add_tour.html', {
+        'form': form,
+        'tariff_formset': tariff_formset,
+        'meal_option_formset': meal_option_formset,
+    })
+</code></pre>
+<p>Получает данные из формы, создает тур и создает тарифы и варианты питания для созданного тура. Только для администратора.</p>
+<h2 id="_14">Редактирование тура</h2>
+<pre><code class="language-python">@admin_required
+def edit_tour(request, pk):
+    tour = get_object_or_404(Tour, pk=pk)
+
+    if request.method == 'POST':
+        form = TourForm(request.POST, instance=tour)
+        tariff_formset = TariffFormSet(request.POST, instance=tour)
+        meal_option_formset = MealOptionFormSet(request.POST, instance=tour)
+
+        if form.is_valid() and tariff_formset.is_valid() and meal_option_formset.is_valid():
+            # Сохраняем изменения в туре
+            form.save()
+
+            for tariff in tariff_formset.save(commit=False):
+                tariff.tour = tour
+                tariff.save()
+
+            # Удаляем только помеченные для удаления тарифы
+            for tariff in tariff_formset.deleted_objects:
+                tariff.delete()
+
+            for meal_option in meal_option_formset.save(commit=False):
+                meal_option.tour = tour
+                meal_option.save()
+
+            # Удаляем только помеченные для удаления варианты питания
+            for meal_option in meal_option_formset.deleted_objects:
+                meal_option.delete()
+
+            return redirect('tour_list')
+
+    else:
+        form = TourForm(instance=tour)
+        tariff_formset = TariffFormSet(instance=tour)
+        meal_option_formset = MealOptionFormSet(instance=tour)
+
+    return render(request, 'edit_tour.html', {
+        'form': form,
+        'tariff_formset': tariff_formset,
+        'meal_option_formset': meal_option_formset,
+    })
+</code></pre>
+<p>Получает данные из формы и обновляет данные о туре, добавляет тарифы и опции и удаляет помеченное. Только для администратора.</p>
+<h2 id="_15">Просмотр бронирований администратором</h2>
+<pre><code class="language-python">@admin_required
+def view_bookings(request):
+    bookings = Booking.objects.all()
+    return render(request, 'view_bookings.html', {'bookings': bookings})
+</code></pre>
+<p>Возвращает бронирования всех пользователей. Только для администратора.</p>
+<h2 id="_16">Подтверждение бронирований пользователей</h2>
+<pre><code class="language-python">@admin_required
+def confirm_booking(request, pk):
+    booking = get_object_or_404(Booking, pk=pk)
+    booking.is_confirmed = True
+    booking.save()
+    return redirect('view_bookings')
+</code></pre>
+<p>Подтвержает бронирование пользователей, перенаправляет на страницу бронирований пользоватей. Только для администратора.</p>
+<h2 id="_17">Проданные туры по странам</h2>
+<pre><code class="language-python">@admin_required
+def sold_tours_by_country(request):
+    tours_by_country = (
+        Tour.objects.filter(bookings__is_confirmed=True)
+        .values('country')
+        .annotate(total_bookings=Count('bookings'))
+        .order_by('-total_bookings')
+    )
+    return render(request, 'sold_tours.html', {'tours_by_country': tours_by_country})
+</code></pre>
+<p>Фильтрует туры и по странам и считает количество подтвержденных бронирований для каждой страны. Только для администратора.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
