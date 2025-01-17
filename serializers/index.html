@@ -16,7 +16,7 @@
     
     
       
-        <title>Документация моделей для концертной площадки - Отчёт Web-программирование Лабораторная №3</title>
+        <title>Сериализаторы - Отчёт Web-программирование Лабораторная №3</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Документация моделей для концертной площадки
+              Сериализаторы
             
           </span>
         </div>
@@ -367,74 +367,227 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-performer" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Исполнитель (Performer)
+      Пользователи
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пользователи">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#userregistrationserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      UserRegistrationSerializer
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#2-concert" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#userloginserializer" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Концерт (Concert)
+      UserLoginSerializer
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#3-equipment" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Оборудование (Equipment)
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-concertequipment" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Оборудование для концерта (ConcertEquipment)
+      Концерты
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Концерты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#concertserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConcertSerializer
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#5-ticket" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#concertlistserializer" class="md-nav__link">
     <span class="md-ellipsis">
-      5. Билет (Ticket)
+      ConcertListSerializer
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#6-order" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#concertdetailserializer" class="md-nav__link">
     <span class="md-ellipsis">
-      6. Заказ (Order)
+      ConcertDetailSerializer
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#7-employee" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Сотрудник (Employee)
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#8-organizer" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      8. Организатор (Organizer)
+      Билеты
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Билеты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ticketserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      TicketSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticketdetailserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      TicketDetailSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticketcreateserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      TicketCreateSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ticketorderserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      TicketOrderSerializer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Заказы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Заказы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#orderserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ordercreationserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrderCreationSerializer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Организаторы
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Организаторы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organizerserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      OrganizerSerializer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Оборудование
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Оборудование">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#equipmentserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      EquipmentSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concertequipmentserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConcertEquipmentSerializer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concertequipmentcreationserializer" class="md-nav__link">
+    <span class="md-ellipsis">
+      ConcertEquipmentCreationSerializer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -453,134 +606,189 @@
                   
 
 
-<h1 id="_1">Документация моделей для концертной площадки</h1>
-<h2 id="1-performer">1. Исполнитель (Performer)</h2>
-<pre><code class="language-python">class Performer(models.Model):
-    name = models.CharField(max_length=255)
-    manager = models.CharField(max_length=255)
-    email = models.EmailField()
-    phone = models.CharField(max_length=20)
+<h1 id="_1">Сериализаторы</h1>
+<h2 id="_2">Пользователи</h2>
+<h3 id="userregistrationserializer">UserRegistrationSerializer</h3>
+<pre><code class="language-python">class UserRegistrationSerializer(serializers.Serializer):
+    username = serializers.CharField(max_length=255)
+    email = serializers.EmailField(required=False)
+    password = serializers.CharField(write_only=True)
 </code></pre>
-<p><strong>Описание:</strong> Хранит информацию об исполнителях.
-- <code>name</code> — Имя исполнителя.
-- <code>manager</code> — Менеджер исполнителя.
-- <code>email</code> — Контактный email.
-- <code>phone</code> — Контактный телефон.</p>
-<hr />
-<h2 id="2-concert">2. Концерт (Concert)</h2>
-<pre><code class="language-python">class Concert(models.Model):
-    STATUS_CHOICES = [
-        ('held', 'Проведен'),
-        ('cancelled', 'Отменен'),
-        ('prepared', 'Подготовлен'),
-        ('in_progress', 'В работе')
-    ]
+<ul>
+<li>Используется для регистрации пользователя.</li>
+<li>Поля: username, email (необязательное), password (скрытое поле).</li>
+</ul>
+<h3 id="userloginserializer">UserLoginSerializer</h3>
+<pre><code class="language-python">class UserLoginSerializer(serializers.Serializer):
+    username = serializers.CharField(max_length=255)
+    password = serializers.CharField(write_only=True)
+</code></pre>
+<ul>
+<li>Используется для авторизации пользователя.</li>
+<li>Поля: username, password (скрытое поле).</li>
+</ul>
+<h2 id="_3">Концерты</h2>
+<h3 id="concertserializer">ConcertSerializer</h3>
+<pre><code class="language-python">class ConcertSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Concert
+        fields = ['title', 'performer', 'description', 'date', 'age_limit']
+</code></pre>
+<ul>
+<li>Используется для создания и обновления концертов.</li>
+<li>Поля: название, исполнитель, описание, дата, возрастное ограничение.</li>
+</ul>
+<h3 id="concertlistserializer">ConcertListSerializer</h3>
+<pre><code class="language-python">class ConcertListSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Concert
+        fields = ['id', 'title', 'date']
+</code></pre>
+<ul>
+<li>Используется для списка концертов.</li>
+<li>Поля: ID, название, дата.</li>
+</ul>
+<h3 id="concertdetailserializer">ConcertDetailSerializer</h3>
+<pre><code class="language-python">class ConcertDetailSerializer(serializers.ModelSerializer):
+    tickets = serializers.SerializerMethodField()
 
-    image = models.ImageField(upload_to='concerts', default='concerts.jpg')
-    title = models.CharField(max_length=255)
-    description = models.TextField()
-    performer = models.ForeignKey(Performer, on_delete=models.CASCADE, related_name=&quot;concerts&quot;)
-    date = models.DateField()
-    age_limit = models.PositiveIntegerField(default=0)
-    status = models.CharField(max_length=11, choices=STATUS_CHOICES, default='in_progress')
-</code></pre>
-<p><strong>Описание:</strong> Хранит информацию о концертах.
-- <code>image</code> — Обложка концерта.
-- <code>title</code> — Название концерта.
-- <code>description</code> — Описание концерта.
-- <code>performer</code> — Исполнитель.
-- <code>date</code> — Дата проведения.
-- <code>age_limit</code> — Возрастное ограничение.
-- <code>status</code> — Статус концерта (<code>held</code>, <code>cancelled</code>, <code>prepared</code>, <code>in_progress</code>).</p>
-<hr />
-<h2 id="3-equipment">3. Оборудование (Equipment)</h2>
-<pre><code class="language-python">class Equipment(models.Model):
-    name = models.CharField(max_length=255)
-    quantity = models.PositiveIntegerField()
-</code></pre>
-<p><strong>Описание:</strong> Хранит список оборудования.
-- <code>name</code> — Название оборудования.
-- <code>quantity</code> — Количество.</p>
-<hr />
-<h2 id="4-concertequipment">4. Оборудование для концерта (ConcertEquipment)</h2>
-<pre><code class="language-python">class ConcertEquipment(models.Model):
-    concert = models.ForeignKey(Concert, on_delete=models.CASCADE, related_name=&quot;equipment&quot;)
-    equipment = models.ForeignKey(Equipment, on_delete=models.CASCADE, related_name=&quot;concerts&quot;)
-    quantity = models.PositiveIntegerField()
-</code></pre>
-<p><strong>Описание:</strong> Связывает концерты с необходимым оборудованием.
-- <code>concert</code> — Концерт.
-- <code>equipment</code> — Оборудование.
-- <code>quantity</code> — Количество оборудования.</p>
-<hr />
-<h2 id="5-ticket">5. Билет (Ticket)</h2>
-<pre><code class="language-python">class Ticket(models.Model):
-    concert = models.ForeignKey('Concert', on_delete=models.CASCADE, related_name='ticket_categories')
-    name = models.CharField(max_length=255)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    total_quantity = models.PositiveIntegerField()
-    sold_quantity = models.PositiveIntegerField(default=0)
-</code></pre>
-<p><strong>Описание:</strong> Хранит информацию о билетах на концерт.
-- <code>concert</code> — Концерт.
-- <code>name</code> — Название категории билетов.
-- <code>price</code> — Цена билета.
-- <code>total_quantity</code> — Всего билетов.
-- <code>sold_quantity</code> — Количество проданных билетов.</p>
-<p>Методы:
-- <code>available_quantity</code> — Возвращает количество доступных билетов.
-- <code>sell_tickets(quantity)</code> — Продает указанное количество билетов.</p>
-<hr />
-<h2 id="6-order">6. Заказ (Order)</h2>
-<pre><code class="language-python">class Order(models.Model):
-    STATUS_CHOICES = [
-        ('confirmed', 'Подтверждено'),
-        ('pending', 'В ожидании'),
-        ('returned', 'Возврат'),
-    ]
+    class Meta:
+        model = Concert
+        fields = ['id', 'title', 'description', 'date', 'age_limit', 'status', 'performer', 'tickets']
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name=&quot;orders&quot;)
-    ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE, related_name=&quot;orders&quot;)
-    quantity = models.PositiveIntegerField()
-    date = models.DateTimeField(auto_now_add=True)
-    total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='pending')
+    def get_tickets(self, obj):
+        return TicketDetailSerializer(obj.ticket_categories.all(), many=True).data
 </code></pre>
-<p><strong>Описание:</strong> Хранит информацию о заказах билетов.
-- <code>user</code> — Пользователь.
-- <code>ticket</code> — Выбранный билет.
-- <code>quantity</code> — Количество билетов.
-- <code>date</code> — Дата создания заказа.
-- <code>total_price</code> — Итоговая стоимость.
-- <code>status</code> — Статус заказа (<code>confirmed</code>, <code>pending</code>, <code>returned</code>).</p>
-<p>Методы:
-- <code>save()</code> — Пересчитывает <code>total_price</code> перед сохранением.</p>
-<hr />
-<h2 id="7-employee">7. Сотрудник (Employee)</h2>
-<pre><code class="language-python">class Employee(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True, related_name=&quot;employee&quot;)
-    name = models.CharField(max_length=255)
-    position = models.CharField(max_length=255)
-    salary = models.DecimalField(max_digits=10, decimal_places=2)
-    phone = models.CharField(max_length=20)
-    email = models.EmailField()
+<ul>
+<li>Используется для детальной информации о концерте.</li>
+<li>Включает связанные билеты.</li>
+</ul>
+<h2 id="_4">Билеты</h2>
+<h3 id="ticketserializer">TicketSerializer</h3>
+<pre><code class="language-python">class TicketSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Ticket
+        fields = ['name', 'price', 'total_quantity', 'concert']
 </code></pre>
-<p><strong>Описание:</strong> Хранит информацию о сотрудниках концертной площадки.
-- <code>user</code> — Привязка к учетной записи.
-- <code>name</code> — Имя сотрудника.
-- <code>position</code> — Должность.
-- <code>salary</code> — Зарплата.
-- <code>phone</code> — Контактный телефон.
-- <code>email</code> — Контактный email.</p>
-<hr />
-<h2 id="8-organizer">8. Организатор (Organizer)</h2>
-<pre><code class="language-python">class Organizer(models.Model):
-    employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name=&quot;organized_concerts&quot;)
-    concert = models.ForeignKey(Concert, on_delete=models.CASCADE, related_name=&quot;organizers&quot;)
+<ul>
+<li>Используется для создания и обновления билетов.</li>
+<li>Поля: название, цена, общее количество, связанный концерт.</li>
+</ul>
+<h3 id="ticketdetailserializer">TicketDetailSerializer</h3>
+<pre><code class="language-python">class TicketDetailSerializer(serializers.ModelSerializer):
+    available_quantity = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Ticket
+        fields = ['id', 'name', 'price', 'total_quantity', 'sold_quantity', 'available_quantity']
+
+    def get_available_quantity(self, obj):
+        return obj.total_quantity - obj.sold_quantity
 </code></pre>
-<p><strong>Описание:</strong> Связывает сотрудников-организаторов с концертами.
-- <code>employee</code> — Организатор.
-- <code>concert</code> — Концерт.</p>
+<ul>
+<li>Используется для просмотра билетов.</li>
+<li>Рассчитывает доступное количество билетов.</li>
+</ul>
+<h3 id="ticketcreateserializer">TicketCreateSerializer</h3>
+<pre><code class="language-python">class TicketCreateSerializer(serializers.Serializer):
+    name = serializers.CharField(max_length=255)
+    price = serializers.DecimalField(max_digits=10, decimal_places=2)
+    quantity = serializers.IntegerField()
+</code></pre>
+<ul>
+<li>Используется для создания билетов.</li>
+<li>Поля: название, цена, количество.</li>
+</ul>
+<h3 id="ticketorderserializer">TicketOrderSerializer</h3>
+<pre><code class="language-python">class TicketOrderSerializer(serializers.ModelSerializer):
+    concert = ConcertSerializer(read_only=True)
+
+    class Meta:
+        model = Ticket
+        fields = ['name', 'price', 'concert']
+</code></pre>
+<ul>
+<li>Используется для отображения информации о заказе билета.</li>
+<li>Включает связанные концерты.</li>
+</ul>
+<h2 id="_5">Заказы</h2>
+<h3 id="orderserializer">OrderSerializer</h3>
+<pre><code class="language-python">class OrderSerializer(serializers.ModelSerializer):
+    ticket = TicketOrderSerializer()
+
+    class Meta:
+        model = Order
+        fields = ['ticket', 'quantity', 'date', 'total_price', 'status']
+</code></pre>
+<ul>
+<li>Используется для просмотра заказов.</li>
+<li>Включает информацию о билете и статусе заказа.</li>
+</ul>
+<h3 id="ordercreationserializer">OrderCreationSerializer</h3>
+<pre><code class="language-python">class OrderCreationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Order
+        fields = ['ticket', 'quantity']
+
+    def create(self, validated_data):
+        ticket = validated_data['ticket']
+        quantity = validated_data['quantity']
+
+        if ticket.available_quantity &lt; quantity:
+            raise serializers.ValidationError({&quot;error&quot;: &quot;Недостаточно доступных билетов&quot;})
+
+        ticket.sell_tickets(quantity)
+        order = Order.objects.create(**validated_data)
+        return order
+</code></pre>
+<ul>
+<li>Используется для создания заказа.</li>
+<li>Проверяет наличие билетов перед созданием заказа.</li>
+</ul>
+<h2 id="_6">Организаторы</h2>
+<h3 id="organizerserializer">OrganizerSerializer</h3>
+<pre><code class="language-python">class OrganizerSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Organizer
+        fields = '__all__'
+</code></pre>
+<ul>
+<li>Используется для сериализации организаторов концертов.</li>
+<li>Включает все поля модели.</li>
+</ul>
+<h2 id="_7">Оборудование</h2>
+<h3 id="equipmentserializer">EquipmentSerializer</h3>
+<pre><code class="language-python">class EquipmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Equipment
+        fields = ['name']
+</code></pre>
+<ul>
+<li>Используется для списка оборудования.</li>
+<li>Поля: название оборудования.</li>
+</ul>
+<h3 id="concertequipmentserializer">ConcertEquipmentSerializer</h3>
+<pre><code class="language-python">class ConcertEquipmentSerializer(serializers.ModelSerializer):
+    equipment = EquipmentSerializer()
+
+    class Meta:
+        model = ConcertEquipment
+        fields = ['concert', 'equipment', 'quantity']
+</code></pre>
+<ul>
+<li>Используется для отображения оборудования, связанного с концертом.</li>
+<li>Включает информацию о концерте и количестве оборудования.</li>
+</ul>
+<h3 id="concertequipmentcreationserializer">ConcertEquipmentCreationSerializer</h3>
+<pre><code class="language-python">class ConcertEquipmentCreationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ConcertEquipment
+        fields = ['concert', 'equipment', 'quantity']
+</code></pre>
+<ul>
+<li>Используется для добавления оборудования к концерту.</li>
+<li>Поля: концерт, оборудование, количество.</li>
+</ul>
 
 
 

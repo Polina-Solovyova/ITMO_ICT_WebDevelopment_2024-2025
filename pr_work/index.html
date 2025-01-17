@@ -16,7 +16,7 @@
     
     
       
-        <title>Документация моделей для концертной площадки - Отчёт Web-программирование Лабораторная №3</title>
+        <title>Практическое задание 3.1 - Отчёт Web-программирование Лабораторная №3</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#31" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Документация моделей для концертной площадки
+              Практическое задание 3.1
             
           </span>
         </div>
@@ -367,72 +367,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-performer" class="md-nav__link">
+  <a href="#1" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Исполнитель (Performer)
+      Задание 1
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-concert" class="md-nav__link">
+  <a href="#2" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Концерт (Concert)
+      Задание 2
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-equipment" class="md-nav__link">
+  <a href="#3" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Оборудование (Equipment)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#4-concertequipment" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Оборудование для концерта (ConcertEquipment)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-ticket" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Билет (Ticket)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-order" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Заказ (Order)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-employee" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Сотрудник (Employee)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#8-organizer" class="md-nav__link">
-    <span class="md-ellipsis">
-      8. Организатор (Organizer)
+      Задание 3
     </span>
   </a>
   
@@ -453,134 +408,183 @@
                   
 
 
-<h1 id="_1">Документация моделей для концертной площадки</h1>
-<h2 id="1-performer">1. Исполнитель (Performer)</h2>
-<pre><code class="language-python">class Performer(models.Model):
-    name = models.CharField(max_length=255)
-    manager = models.CharField(max_length=255)
-    email = models.EmailField()
-    phone = models.CharField(max_length=20)
-</code></pre>
-<p><strong>Описание:</strong> Хранит информацию об исполнителях.
-- <code>name</code> — Имя исполнителя.
-- <code>manager</code> — Менеджер исполнителя.
-- <code>email</code> — Контактный email.
-- <code>phone</code> — Контактный телефон.</p>
-<hr />
-<h2 id="2-concert">2. Концерт (Concert)</h2>
-<pre><code class="language-python">class Concert(models.Model):
-    STATUS_CHOICES = [
-        ('held', 'Проведен'),
-        ('cancelled', 'Отменен'),
-        ('prepared', 'Подготовлен'),
-        ('in_progress', 'В работе')
-    ]
+<h1 id="31">Практическое задание 3.1</h1>
+<h2 id="1">Задание 1</h2>
+<p>Напишите запрос на создание 6-7 новых автовладельцев и 5-6 автомобилей, каждому автовладельцу назначьте удостоверение и от 1 до 3 автомобилей. Задание можете выполнить либо в интерактивном режиме интерпретатора, либо в отдельном python-файле. Результатом должны стать запросы и отображение созданных объектов. </p>
+<pre><code class="language-python">from project_second_app.models import *
+car = Car.objects.create(state_number='A000AA199', brand='BMW', model='X5')
+car = Car.objects.create(state_number='A001AA199', brand='BMW', model='X4')
+car = Car.objects.create(state_number='A000AA198', brand='BMW', model='X5')
+car = Car.objects.create(state_number='A004AA197', brand='BMW', model='M5')
+car = Car.objects.create(state_number='A006AA197', brand='Audi', model='A80')
+car = Car.objects.create(state_number='A007AA197', brand='Audi', model='S6')
+owner = Owner.objects.create(firstName=&quot;First&quot;, lastName=&quot;Firstov&quot;)
+owner = Owner.objects.create(firstName=&quot;Second&quot;, lastName=&quot;Seconod&quot;)
+owner = Owner.objects.create(firstName=&quot;Third&quot;, lastName=&quot;Thirdov&quot;)
+owner = Owner.objects.create(firstName=&quot;Fourth&quot;, lastName=&quot;Fourthov&quot;)
+owner = Owner.objects.create(firstName=&quot;Fith&quot;, lastName=&quot;Fithov&quot;)
+owner = Owner.objects.create(firstName=&quot;Sixth&quot;, lastName=&quot;Sixthov&quot;)
+car = Car.objects.get(state_number='A000AA199')
+owner = Owner.objects.get(firstName='First')
+ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2023-11-06', date_end='2024-03-12')
+owner = Owner.objects.get(firstName='Second')
+car = Car.objects.get(state_number='A001AA199')
+ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2023-12-06', date_end='2024-05-12')
+car = Car.objects.get(state_number='A000AA198')
+owner = Owner.objects.get(firstName='Third')
+ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2024-01-15', date_end='2024-05-12')
+car = Car.objects.get(state_number='A004AA197')
+owner = Owner.objects.get(firstName='Fourth')
+ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2024-03-15', date_end='2024-04-13')
+car = Car.objects.get(state_number='A006AA197')
+owner = Owner.objects.get(firstName='Fith')
+ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2024-01-25')
+car = Car.objects.get(state_number='A007AA197')
+owner = Owner.objects.get(firstName='Sixth')
+ownership = Ownership.objects.create(owner_id=owner, car_id=car, date_start='2024-06-21')
 
-    image = models.ImageField(upload_to='concerts', default='concerts.jpg')
-    title = models.CharField(max_length=255)
-    description = models.TextField()
-    performer = models.ForeignKey(Performer, on_delete=models.CASCADE, related_name=&quot;concerts&quot;)
-    date = models.DateField()
-    age_limit = models.PositiveIntegerField(default=0)
-    status = models.CharField(max_length=11, choices=STATUS_CHOICES, default='in_progress')
+license = DriverLicense.objects.create(owner_id=owner, license_number='1111111111', type='b', date_of_issue='2026-12-13')
+owner = Owner.objects.get(firstName='Fith')
+license = DriverLicense.objects.create(owner_id=owner, license_number='1111111112', type='b', date_of_issue='2030-05-13')
+owner = Owner.objects.get(firstName='Fourth')
+license = DriverLicense.objects.create(owner_id=owner, license_number='1111111113', type='b', date_of_issue='2032-05-13')
+owner = Owner.objects.get(firstName='Third')
+license = DriverLicense.objects.create(owner_id=owner, license_number='1111111114', type='b', date_of_issue='2033-02-25')
+owner = Owner.objects.get(firstName='Second')
+license = DriverLicense.objects.create(owner_id=owner, license_number='1111111115', type='b', date_of_issue='2025-02-25')
+owner = Owner.objects.get(firstName='First')
+license = DriverLicense.objects.create(owner_id=owner, license_number='1111111116', type='b', date_of_issue='2025-02-25')
 </code></pre>
-<p><strong>Описание:</strong> Хранит информацию о концертах.
-- <code>image</code> — Обложка концерта.
-- <code>title</code> — Название концерта.
-- <code>description</code> — Описание концерта.
-- <code>performer</code> — Исполнитель.
-- <code>date</code> — Дата проведения.
-- <code>age_limit</code> — Возрастное ограничение.
-- <code>status</code> — Статус концерта (<code>held</code>, <code>cancelled</code>, <code>prepared</code>, <code>in_progress</code>).</p>
-<hr />
-<h2 id="3-equipment">3. Оборудование (Equipment)</h2>
-<pre><code class="language-python">class Equipment(models.Model):
-    name = models.CharField(max_length=255)
-    quantity = models.PositiveIntegerField()
+<p>Результаты:
+<img alt="" src="images/1.png" />
+<img alt="" src="images/2.png" /></p>
+<h2 id="2">Задание 2</h2>
+<p>По созданным в пр.1 данным написать следующие запросы на фильтрацию:</p>
+<ul>
+<li>Где это необходимо, добавьте related_name к полям модели</li>
+<li>Выведете все машины марки “Toyota” (или любой другой марки, которая у вас есть)</li>
+<li>Найти всех водителей с именем “Олег” (или любым другим именем на ваше усмотрение)</li>
+<li>Взяв любого случайного владельца получить его id, и по этому id получить экземпляр удостоверения в виде объекта модели (можно в 2 запроса)</li>
+<li>Вывести всех владельцев красных машин (или любого другого цвета, который у вас присутствует)</li>
+<li>Найти всех владельцев, чей год владения машиной начинается с 2010 (или любой другой год, который присутствует у вас в базе)</li>
+</ul>
+<pre><code class="language-python">Car.objects.filter(brand='BMW')
+Owner.objects.filter(firstName='First')
+owner_id = Owner.objects.get(firstName='First').id
+license = DriverLicense.objects.get(owner_id=1)
+owners = Owner.objects.filter(car_)
+owners = Owner.objects.filter(owner_car__car__color__contains='Red')
+owners = Owner.objects.filter(owner_car__date_start__contains='2024')
 </code></pre>
-<p><strong>Описание:</strong> Хранит список оборудования.
-- <code>name</code> — Название оборудования.
-- <code>quantity</code> — Количество.</p>
-<hr />
-<h2 id="4-concertequipment">4. Оборудование для концерта (ConcertEquipment)</h2>
-<pre><code class="language-python">class ConcertEquipment(models.Model):
-    concert = models.ForeignKey(Concert, on_delete=models.CASCADE, related_name=&quot;equipment&quot;)
-    equipment = models.ForeignKey(Equipment, on_delete=models.CASCADE, related_name=&quot;concerts&quot;)
-    quantity = models.PositiveIntegerField()
+<p>Результаты:
+<img alt="" src="images/3.png" /></p>
+<h2 id="3">Задание 3</h2>
+<ul>
+<li>Вывод даты выдачи самого старшего водительского удостоверения</li>
+<li>Укажите самую позднюю дату владения машиной, имеющую какую-то из существующих моделей в вашей базе</li>
+<li>Выведите количество машин для каждого водителя</li>
+<li>Подсчитайте количество машин каждой марки</li>
+<li>Отсортируйте всех автовладельцев по дате выдачи удостоверения </li>
+</ul>
+<pre><code class="language-python">DriverLicense.objects.aggregate(Min(&quot;date_of_issue&quot;))
+Ownership.objects.aggregate(Max(&quot;date_start&quot;))
+Ownership.objects.values(&quot;owner&quot;).annotate(Count(&quot;id&quot;))
+Car.objects.values(&quot;brand&quot;).annotate(Count(&quot;id&quot;))
+from django.db.models import F
+Owner.objects.annotate(issue_date=F('driverlicense__date_of_issue')).distinct().order_by('issue_date')
 </code></pre>
-<p><strong>Описание:</strong> Связывает концерты с необходимым оборудованием.
-- <code>concert</code> — Концерт.
-- <code>equipment</code> — Оборудование.
-- <code>quantity</code> — Количество оборудования.</p>
-<hr />
-<h2 id="5-ticket">5. Билет (Ticket)</h2>
-<pre><code class="language-python">class Ticket(models.Model):
-    concert = models.ForeignKey('Concert', on_delete=models.CASCADE, related_name='ticket_categories')
-    name = models.CharField(max_length=255)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    total_quantity = models.PositiveIntegerField()
-    sold_quantity = models.PositiveIntegerField(default=0)
+<p>Результаты:
+<img alt="" src="images/4.png" />
+<img alt="" src="images/5.png" /></p>
+<h1 id="32">Практическое задание 3.2</h1>
+<h2 id="1_1">Задание 1</h2>
+<p>Реализовать ендпоинты для добавления и просмотра скилов методом, описанным в пункте выше.</p>
+<h3 id="serializerspy">serializers.py:</h3>
+<pre><code>class SkillSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Skill
+        fields = "__all__"
 </code></pre>
-<p><strong>Описание:</strong> Хранит информацию о билетах на концерт.
-- <code>concert</code> — Концерт.
-- <code>name</code> — Название категории билетов.
-- <code>price</code> — Цена билета.
-- <code>total_quantity</code> — Всего билетов.
-- <code>sold_quantity</code> — Количество проданных билетов.</p>
-<p>Методы:
-- <code>available_quantity</code> — Возвращает количество доступных билетов.
-- <code>sell_tickets(quantity)</code> — Продает указанное количество билетов.</p>
-<hr />
-<h2 id="6-order">6. Заказ (Order)</h2>
-<pre><code class="language-python">class Order(models.Model):
-    STATUS_CHOICES = [
-        ('confirmed', 'Подтверждено'),
-        ('pending', 'В ожидании'),
-        ('returned', 'Возврат'),
-    ]
+<h3 id="viewspy">views.py:</h3>
+<pre><code>class SkillAPIView(APIView):
+   def get(self, request):
+       skills = Skill.objects.all()
+       serializer = SkillSerializer(skills, many=True)
+       return Response({"Skills": serializer.data})
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name=&quot;orders&quot;)
-    ticket = models.ForeignKey(Ticket, on_delete=models.CASCADE, related_name=&quot;orders&quot;)
-    quantity = models.PositiveIntegerField()
-    date = models.DateTimeField(auto_now_add=True)
-    total_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='pending')
+class SkillCreateSerializer(serializers.Serializer):
+    title = serializers.CharField(max_length=120)
+
+    def create(self, validated_data):
+        skill_model_inst = Skill(**validated_data)
+        skill_model_inst.save()
+        return skill_model_inst
+
+    def update(self, instance, validated_data):
+        pass
 </code></pre>
-<p><strong>Описание:</strong> Хранит информацию о заказах билетов.
-- <code>user</code> — Пользователь.
-- <code>ticket</code> — Выбранный билет.
-- <code>quantity</code> — Количество билетов.
-- <code>date</code> — Дата создания заказа.
-- <code>total_price</code> — Итоговая стоимость.
-- <code>status</code> — Статус заказа (<code>confirmed</code>, <code>pending</code>, <code>returned</code>).</p>
-<p>Методы:
-- <code>save()</code> — Пересчитывает <code>total_price</code> перед сохранением.</p>
-<hr />
-<h2 id="7-employee">7. Сотрудник (Employee)</h2>
-<pre><code class="language-python">class Employee(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True, related_name=&quot;employee&quot;)
-    name = models.CharField(max_length=255)
-    position = models.CharField(max_length=255)
-    salary = models.DecimalField(max_digits=10, decimal_places=2)
-    phone = models.CharField(max_length=20)
-    email = models.EmailField()
+<p><img alt="Результат" src="images/16.png" />
+<img alt="Результат" src="images/17.png" /></p>
+<h2 id="2_1">Задание 2</h2>
+<p>Вывод полной информации о всех войнах и их профессиях (в одном запросе).</p>
+<h3 id="serializerspy_1">serializers.py:</h3>
+<pre><code>class WarriorProfessionSerializer(serializers.ModelSerializer):
+    profession = ProfessionSerializer(many=False)
+    class Meta:
+        model = Warrior
+        fields = ["id", "race", "name", "level", "profession"]
 </code></pre>
-<p><strong>Описание:</strong> Хранит информацию о сотрудниках концертной площадки.
-- <code>user</code> — Привязка к учетной записи.
-- <code>name</code> — Имя сотрудника.
-- <code>position</code> — Должность.
-- <code>salary</code> — Зарплата.
-- <code>phone</code> — Контактный телефон.
-- <code>email</code> — Контактный email.</p>
-<hr />
-<h2 id="8-organizer">8. Организатор (Organizer)</h2>
-<pre><code class="language-python">class Organizer(models.Model):
-    employee = models.ForeignKey(Employee, on_delete=models.CASCADE, related_name=&quot;organized_concerts&quot;)
-    concert = models.ForeignKey(Concert, on_delete=models.CASCADE, related_name=&quot;organizers&quot;)
+<h3 id="viewspy_1">views.py:</h3>
+<pre><code>class WarriorProfessionListAPIView(generics.ListAPIView):
+    serializer_class = WarriorProfessionSerializer
+    queryset = Warrior.objects.all()
 </code></pre>
-<p><strong>Описание:</strong> Связывает сотрудников-организаторов с концертами.
-- <code>employee</code> — Организатор.
-- <code>concert</code> — Концерт.</p>
+<p><img alt="Результат" src="images/19.png" /></p>
+<p>Вывод полной информации о всех войнах и их скилах (в одном запросе).</p>
+<h3 id="serializerspy_2">serializers.py:</h3>
+<pre><code>class WarriorSkillSerializer(serializers.ModelSerializer):
+    skill = SkillSerializer(many=True)
+
+    class Meta:
+        model = Warrior
+        fields = ["id", "race", "name", "level", "skill"]
+</code></pre>
+<h3 id="viewspy_2">views.py:</h3>
+<pre><code>class WarriorSkillListApiView(generics.ListAPIView):
+    serializer_class = WarriorSkillSerializer
+    queryset = Warrior.objects.all()
+</code></pre>
+<p><img alt="Результат" src="images/18.png" /></p>
+<p>Вывод полной информации о войне (по id), его профессиях и скилах.</p>
+<h3 id="serializerspy_3">serializers.py:</h3>
+<pre><code>class OneWarriorSerializer(serializers.ModelSerializer,):
+    skill = SkillSerializer(many=True)
+    profession = ProfessionSerializer(many=False)
+
+    class Meta:
+        model = Warrior
+        fields = "__all__"
+</code></pre>
+<h3 id="viewspy_3">views.py:</h3>
+<pre><code>class ShowWarriorAPIView(generics.RetrieveAPIView):
+    serializer_class = OneWarriorSerializer
+    queryset = Warrior.objects.all()
+</code></pre>
+<p><img alt="Результат" src="images/20.png" /></p>
+<p>Удаление война по id.</p>
+<h3 id="viewspy_4">views.py:</h3>
+<pre><code>class DeleteWarriorAPIView(generics.DestroyAPIView):
+    serializer_class = OneWarriorSerializer
+    queryset = Warrior.objects.all()
+</code></pre>
+<p><img alt="Результат" src="images/22.png" /></p>
+<p>Редактирование информации о войне.</p>
+<h3 id="viewspy_5">views.py:</h3>
+<pre><code>class UpdateWarriorAPIView(UpdateAPIView):
+    serializer_class = OneWarriorSerializer
+    queryset = Warrior.objects.all()
+</code></pre>
+<p><img alt="Результат" src="images/21.png" /></p>
 
 
 
