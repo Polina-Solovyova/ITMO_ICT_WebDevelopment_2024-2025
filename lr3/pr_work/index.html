@@ -882,9 +882,6 @@ license = DriverLicense.objects.create(owner_id=owner, license_number='111111111
 owner = Owner.objects.get(firstName='First')
 license = DriverLicense.objects.create(owner_id=owner, license_number='1111111116', type='b', date_of_issue='2025-02-25')
 </code></pre>
-<p>Результаты:
-<img alt="" src="images/1.png" />
-<img alt="" src="images/2.png" /></p>
 <h2 id="2">Задание 2</h2>
 <p>По созданным в пр.1 данным написать следующие запросы на фильтрацию:</p>
 <ul>
@@ -903,8 +900,6 @@ owners = Owner.objects.filter(car_)
 owners = Owner.objects.filter(owner_car__car__color__contains='Red')
 owners = Owner.objects.filter(owner_car__date_start__contains='2024')
 </code></pre>
-<p>Результаты:
-<img alt="" src="images/3.png" /></p>
 <h2 id="3">Задание 3</h2>
 <ul>
 <li>Вывод даты выдачи самого старшего водительского удостоверения</li>
@@ -920,9 +915,6 @@ Car.objects.values(&quot;brand&quot;).annotate(Count(&quot;id&quot;))
 from django.db.models import F
 Owner.objects.annotate(issue_date=F('driverlicense__date_of_issue')).distinct().order_by('issue_date')
 </code></pre>
-<p>Результаты:
-<img alt="" src="images/4.png" />
-<img alt="" src="images/5.png" /></p>
 <h1 id="32">Практическое задание 3.2</h1>
 <h2 id="1_1">Задание 1</h2>
 <p>Реализовать ендпоинты для добавления и просмотра скилов методом, описанным в пункте выше.</p>
@@ -950,8 +942,6 @@ class SkillCreateSerializer(serializers.Serializer):
     def update(self, instance, validated_data):
         pass
 </code></pre>
-<p><img alt="Результат" src="images/16.png" />
-<img alt="Результат" src="images/17.png" /></p>
 <h2 id="2_1">Задание 2</h2>
 <p>Вывод полной информации о всех войнах и их профессиях (в одном запросе).</p>
 <h3 id="serializerspy_1">serializers.py:</h3>
@@ -966,7 +956,6 @@ class SkillCreateSerializer(serializers.Serializer):
     serializer_class = WarriorProfessionSerializer
     queryset = Warrior.objects.all()
 </code></pre>
-<p><img alt="Результат" src="images/19.png" /></p>
 <p>Вывод полной информации о всех войнах и их скилах (в одном запросе).</p>
 <h3 id="serializerspy_2">serializers.py:</h3>
 <pre><code>class WarriorSkillSerializer(serializers.ModelSerializer):
@@ -981,7 +970,6 @@ class SkillCreateSerializer(serializers.Serializer):
     serializer_class = WarriorSkillSerializer
     queryset = Warrior.objects.all()
 </code></pre>
-<p><img alt="Результат" src="images/18.png" /></p>
 <p>Вывод полной информации о войне (по id), его профессиях и скилах.</p>
 <h3 id="serializerspy_3">serializers.py:</h3>
 <pre><code>class OneWarriorSerializer(serializers.ModelSerializer,):
@@ -997,21 +985,18 @@ class SkillCreateSerializer(serializers.Serializer):
     serializer_class = OneWarriorSerializer
     queryset = Warrior.objects.all()
 </code></pre>
-<p><img alt="Результат" src="images/20.png" /></p>
 <p>Удаление война по id.</p>
 <h3 id="viewspy_4">views.py:</h3>
 <pre><code>class DeleteWarriorAPIView(generics.DestroyAPIView):
     serializer_class = OneWarriorSerializer
     queryset = Warrior.objects.all()
 </code></pre>
-<p><img alt="Результат" src="images/22.png" /></p>
 <p>Редактирование информации о войне.</p>
 <h3 id="viewspy_5">views.py:</h3>
 <pre><code>class UpdateWarriorAPIView(UpdateAPIView):
     serializer_class = OneWarriorSerializer
     queryset = Warrior.objects.all()
 </code></pre>
-<p><img alt="Результат" src="images/21.png" /></p>
 
 
 
