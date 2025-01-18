@@ -16,7 +16,7 @@
     
     
       
-        <title>Маршруты - Отчёт Web-программирование Лабораторная №2</title>
+        <title>Маршруты - Отчёт Web-программирование Лабораторная №3</title>
       
     
     
@@ -74,7 +74,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Отчёт Web-программирование Лабораторная №2" class="md-header__button md-logo" aria-label="Отчёт Web-программирование Лабораторная №2" data-md-component="logo">
+    <a href=".." title="Отчёт Web-программирование Лабораторная №3" class="md-header__button md-logo" aria-label="Отчёт Web-программирование Лабораторная №3" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -88,7 +88,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            Отчёт Web-программирование Лабораторная №2
+            Отчёт Web-программирование Лабораторная №3
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -169,13 +169,13 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Отчёт Web-программирование Лабораторная №2" class="md-nav__button md-logo" aria-label="Отчёт Web-программирование Лабораторная №2" data-md-component="logo">
+    <a href=".." title="Отчёт Web-программирование Лабораторная №3" class="md-nav__button md-logo" aria-label="Отчёт Web-программирование Лабораторная №3" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    Отчёт Web-программирование Лабораторная №2
+    Отчёт Web-программирование Лабораторная №3
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -267,7 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../docs/forms.md" class="md-nav__link">
+      <a href="../docs/serializers.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -327,6 +327,26 @@
   
   
     <li class="md-nav__item">
+      <a href="../docs/pr_work.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practical Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../docs/leetcode.md" class="md-nav__link">
         
   
@@ -360,6 +380,68 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Аутентификация
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Концерты
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Оборудование для концертов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Билеты
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Заказы
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Организаторы
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -374,55 +456,79 @@
 
 
 <h1 id="_1">Маршруты</h1>
-<pre><code class="language-python">urlpatterns = [
+<pre><code class="language-python">from django.urls import path
+from . import views
+
+urlpatterns = [
     # Аутентификация
-    path('register/', views.register, name='register'),
-    path('', login_view, name='login'),
-    path('logout/', logout_view, name='logout'),
+    path('auth/register/', views.register_user, name='register'),
+    path('auth/login/', views.login_user, name='login'),
+    path('auth/logout/', views.logout_user, name='logout'),
 
-    # Туры
-    path('tours/', views.tour_list, name='tour_list'),
-    path('tours/&lt;int:pk&gt;/', views.tour_detail, name='tour_detail'),
-    path('tours/&lt;int:tour_id&gt;/book/', views.book_tour, name='book_tour'),
-    path('tours/&lt;int:pk&gt;/add_review/', views.add_review, name='add_review'),
+    # Концерты
+    path('concerts/', views.concert_list, name='concert-list'),
+    path('concerts/', views.create_concert, name='create_concert'),
+    path('concerts/&lt;int:pk&gt;/', views.concert_detail, name='concert-detail'),
+    path('concerts/&lt;int:pk&gt;/', views.update_concert, name='update_concert'),
+    path('concerts/&lt;int:pk&gt;/delete/', views.delete_concert, name='delete_concert'),
 
-    # Бронирования
-    path('my_bookings/', views.my_bookings, name='my_bookings'),
-    path('my_bookings/&lt;int:pk&gt;/edit', BookingUpdateView.as_view(), name='edit_booking'),
-    path('my_bookings/&lt;int:pk&gt;/delete', BookingDeleteView.as_view(), name='delete_booking'),
-    path('bookings/&lt;int:pk&gt;/', BookingDetailView.as_view(), name='booking_detail'),
+    # Оборудование для концертов
+    path('concerts/equipment/', views.add_equipment_to_concert, name='add_equipment_to_concert'),
+    path('concerts/&lt;int:concert_id&gt;/equipment/', views.get_equipment_for_concert, name='get_equipment_for_concert'),
+    path('concerts/equipment/&lt;int:pk&gt;/remove/', views.remove_equipment_from_concert, name='remove_equipment_from_concert'),
+    path('concerts/equipment/&lt;int:pk&gt;/update/', views.update_equipment_for_concert, name='update_equipment_for_concert'),
 
-    # Админ
-    path('add_tour/', views.add_tour, name='add_tour'),
-    path('edit_tour/&lt;int:pk&gt;/', views.edit_tour, name='edit_tour'),
-    path('view_bookings/', views.view_bookings, name='view_bookings'),
-    path('confirm_booking/&lt;int:pk&gt;/', views.confirm_booking, name='confirm_booking'),
-    path('tour_sales_statistics/', views.sold_tours_by_country, name='tour_sales_statistics'),
+    # Билеты
+    path('tickets/', views.ticket_list_create, name='ticket-list-create'),
+    path('tickets/&lt;int:pk&gt;/', views.ticket_detail, name='ticket-detail'),
+
+    # Заказы
+    path('orders/', views.order_list_create, name='order-list-create'),
+    path('orders/&lt;int:pk&gt;/', views.get_order, name='get_order'),
+    path('orders/&lt;int:pk&gt;/confirm/', views.confirm_order, name='confirm-order'),
+
+    # Организаторы
+    path(&quot;organizer/assign/&lt;int:pk&gt;/&quot;, views.assign_concert, name=&quot;assign_concert&quot;),
+    path(&quot;organizer/concerts/&quot;, views.get_organizer_concerts, name=&quot;organizer-concerts&quot;),
 ]
 </code></pre>
-<p>Аутентификация:
-- register/: Регистрация пользователя.
-- login/: Вход пользователя.
-- logout/: Выход пользователя.
-- 
-Туры:
-- tours/: Список всех туров.
-- tours/<int:pk>/: Детали конкретного тура.
-- tours/<int:tour_id>/book/: Бронирование конкретного тура.
-- tours/<int:pk>/add_review/: Добавление отзыва к туру.
-- 
-Бронирования:
-- my_bookings/: Мои бронирования.
-- my_bookings/<int:pk>/edit: Редактирование бронирования.
-- my_bookings/<int:pk>/delete: Удаление бронирования.
-- bookings/<int:pk>/: Детали конкретного бронирования.
-- 
-Админ:
-- add_tour/: Добавление нового тура.
-- edit_tour/<int:pk>/: Редактирование существующего тура.
-- view_bookings/: Просмотр всех бронирований.
-- confirm_booking/<int:pk>/: Подтверждение бронирования.
-- tour_sales_statistics/: Статистика по продажам туров по странам.</p>
+<h2 id="_2">Аутентификация</h2>
+<ul>
+<li><strong>auth/register/</strong> – Регистрация пользователя.</li>
+<li><strong>auth/login/</strong> – Вход пользователя.</li>
+<li><strong>auth/logout/</strong> – Выход пользователя.</li>
+</ul>
+<h2 id="_3">Концерты</h2>
+<ul>
+<li><strong>concerts/</strong> – Получение списка концертов.</li>
+<li><strong>concerts/</strong> – Создание нового концерта.</li>
+<li><strong>concerts/<int:pk>/</strong> – Просмотр деталей конкретного концерта.</li>
+<li><strong>concerts/<int:pk>/</strong> – Обновление данных концерта.</li>
+<li><strong>concerts/<int:pk>/delete/</strong> – Удаление концерта.</li>
+</ul>
+<h2 id="_4">Оборудование для концертов</h2>
+<ul>
+<li><strong>concerts/equipment/</strong> – Добавление оборудования к концерту.</li>
+<li><strong>concerts/<int:concert_id>/equipment/</strong> – Получение списка оборудования для конкретного концерта.</li>
+<li><strong>concerts/equipment/<int:pk>/remove/</strong> – Удаление оборудования из концерта.</li>
+<li><strong>concerts/equipment/<int:pk>/update/</strong> – Обновление данных об оборудовании для концерта.</li>
+</ul>
+<h2 id="_5">Билеты</h2>
+<ul>
+<li><strong>tickets/</strong> – Получение списка билетов / Создание нового билета.</li>
+<li><strong>tickets/<int:pk>/</strong> – Просмотр деталей конкретного билета.</li>
+</ul>
+<h2 id="_6">Заказы</h2>
+<ul>
+<li><strong>orders/</strong> – Получение списка заказов / Создание нового заказа.</li>
+<li><strong>orders/<int:pk>/</strong> – Просмотр деталей заказа.</li>
+<li><strong>orders/<int:pk>/confirm/</strong> – Подтверждение заказа.</li>
+</ul>
+<h2 id="_7">Организаторы</h2>
+<ul>
+<li><strong>organizer/assign/<int:pk>/</strong> – Назначение организатора на концерт.</li>
+<li><strong>organizer/concerts/</strong> – Получение списка концертов, закрепленных за организатором.</li>
+</ul>
 
 
 
