@@ -16,7 +16,7 @@
     
     
       
-        <title>Админ панель - Отчёт Web-программирование Лабораторная №2</title>
+        <title>Формы - Отчёт Web-программирование Лабораторная №2</title>
       
     
     
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Админ панель
+              Формы
             
           </span>
         </div>
@@ -367,63 +367,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#customuser" class="md-nav__link">
+  <a href="#tourform" class="md-nav__link">
     <span class="md-ellipsis">
-      CustomUser
+      TourForm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#travelagency" class="md-nav__link">
+  <a href="#tariffform-mealoptionform" class="md-nav__link">
     <span class="md-ellipsis">
-      TravelAgency
+      TariffForm и MealOptionForm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tour" class="md-nav__link">
+  <a href="#customauthenticationform" class="md-nav__link">
     <span class="md-ellipsis">
-      Tour
+      CustomAuthenticationForm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#tariff" class="md-nav__link">
+  <a href="#customusercreationform" class="md-nav__link">
     <span class="md-ellipsis">
-      Tariff
+      CustomUserCreationForm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mealoption" class="md-nav__link">
+  <a href="#bookingform" class="md-nav__link">
     <span class="md-ellipsis">
-      MealOption
+      BookingForm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#booking" class="md-nav__link">
+  <a href="#reviewform" class="md-nav__link">
     <span class="md-ellipsis">
-      Booking
+      ReviewForm
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#review" class="md-nav__link">
+  <a href="#toursearchform" class="md-nav__link">
     <span class="md-ellipsis">
-      Review
+      TourSearchForm
     </span>
   </a>
   
@@ -444,105 +444,141 @@
                   
 
 
-<h1 id="_1">Админ панель</h1>
-<h2 id="customuser">CustomUser</h2>
-<ul>
-<li>Возможность фильтрации пользователей по статусу активности и правам администратора.</li>
-<li>Реализован поиск по имени пользователя и электронной почте для быстрой навигации.</li>
-</ul>
-<pre><code class="language-python">@admin.register(CustomUser)
-class CustomUserAdmin(admin.ModelAdmin):
-    list_display = ('username', 'email', 'is_staff', 'is_active')
-    list_filter = ('is_staff', 'is_active')
-    search_fields = ('username', 'email')
-</code></pre>
-<p><img alt="" src="../images/user.png" /></p>
-<h2 id="travelagency">TravelAgency</h2>
-<ul>
-<li>Фильтрация по названию агентства.</li>
-<li>Возможность быстрого поиска по названию агентства.</li>
-</ul>
-<pre><code class="language-python">@admin.register(TravelAgency)
-class TravelAgencyAdmin(admin.ModelAdmin):
-    list_display = ('name', 'contact_info')
-    search_fields = ('name',)
-    ordering = ('name',)
-</code></pre>
-<h2 id="tour">Tour</h2>
-<ul>
-<li>Фильтрация туров по количеству звезд, стране и агентству.</li>
-<li>Поиск по названию отеля, городу и стране для удобства навигации.</li>
-<li>Сортировка туров по дате начала.</li>
-</ul>
-<pre><code class="language-python">@admin.register(Tour)
-class TourAdmin(admin.ModelAdmin):
-    list_display = ('hotel', 'stars', 'agency', 'country', 'city', 'start_date', 'end_date')
-    list_filter = ('stars', 'country', 'agency')
-    search_fields = ('hotel', 'country', 'city')
-    ordering = ('start_date',)
+<h1 id="_1">Формы</h1>
+<h2 id="tourform">TourForm</h2>
+<pre><code class="language-python">class TourForm(forms.ModelForm):
+    class Meta:
+        model = Tour
+        fields = [
+            'hotel',
+            'stars',
+            'agency',
+            'country',
+            'city',
+            'description',
+            'start_date',
+            'end_date',
+            'payment_conditions',
+        ]
+        widgets = {
+            'start_date': forms.DateInput(attrs={'type': 'date'}),  # Календарь для start_date
+            'end_date': forms.DateInput(attrs={'type': 'date'}),    # Календарь для end_date
+        }
 
+    def clean_start_date(self):
+        start_date = self.cleaned_data.get('start_date')
+        today = date.today()
+        if start_date &lt; today:
+            raise forms.ValidationError(&quot;Start date must be today or later.&quot;)
+        return start_date
+
+    def clean_end_date(self):
+        end_date = self.cleaned_data.get('end_date')
+        if end_date &lt; self.cleaned_data.get('start_date'):
+            raise forms.ValidationError(&quot;End date cannot be before start date.&quot;)
+        return end_date
 </code></pre>
-<p><img alt="" src="../images/tour.png" /></p>
-<h2 id="tariff">Tariff</h2>
 <ul>
-<li>Добавлена фильтрация по туру.</li>
-<li>Реализован поиск по названию тарифа.</li>
-<li>Сортировка тарифов по цене.</li>
+<li>Используется для ввода и редактирования данных модели Tour.</li>
+<li>Включает в себя указанные поля модели Tour.</li>
+<li>Поля start_date и end_date используют HTML-виджет с типом date, который отображает календарь для выбора дат.</li>
+<li>clean_start_date: Проверяет, что дата начала (start_date) не раньше сегодняшнего дня. Если дата не проходит проверку, выбрасывается ошибка.</li>
+<li>clean_end_date: Проверяет, что дата окончания (end_date) не предшествует дате начала. Если это условие нарушено, также выбрасывается ошибка.</li>
+<li>Обеспечивает корректный ввод данных для модели Tour, добавляет выбор дат через календарь и включает проверки на соответствие логическим условиям.</li>
 </ul>
-<pre><code class="language-python">@admin.register(Tariff)
-class TariffAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'tour')
-    list_filter = ('tour',)
-    search_fields = ('name',)
-    ordering = ('price',)
+<h2 id="tariffform-mealoptionform">TariffForm и MealOptionForm</h2>
+<pre><code class="language-python">class TariffForm(forms.ModelForm):
+    class Meta:
+        model = Tariff
+        fields = ['name', 'price']
+
+
+class MealOptionForm(forms.ModelForm):
+    class Meta:
+        model = MealOption
+        fields = ['name', 'price']
+
+
+# Inline formsets для Tariff и MealOption
+TariffFormSet = inlineformset_factory(
+    Tour, Tariff, form=TariffForm, extra=1, can_delete=True
+)
+MealOptionFormSet = inlineformset_factory(
+    Tour, MealOption, form=MealOptionForm, extra=1, can_delete=True
+)
 </code></pre>
-<p><img alt="" src="../images/tariff.png" /></p>
-<h2 id="mealoption">MealOption</h2>
+<p>Классы TariffForm и MealOptionForm:</p>
 <ul>
-<li>Фильтрация вариантов питания по туру.</li>
-<li>Возможность поиска по названию варианта питания.</li>
-<li>Сортировка по цене.</li>
+<li>Определяют формы для моделей Tariff и MealOption.</li>
+<li>Указывают, что name и price будут доступны для редактирования.</li>
+<li>TariffFormSet и MealOptionFormSet:</li>
+<li>Используют inlineformset_factory для создания инлайновых формсетов, позволяющих редактировать связанные объекты Tariff и MealOption прямо из формы для тура.</li>
+<li>Связь устанавливается через модель Tour.</li>
 </ul>
-<pre><code class="language-python">@admin.register(MealOption)
-class MealOptionAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'tour')
-    list_filter = ('tour',)
-    search_fields = ('name',)
-    ordering = ('price',)
+<p>Настройки:
+- form: Используемые формы (TariffForm и MealOptionForm).
+- extra=1: При добавлении нового объекта в формсете будет одна пустая форма по умолчанию.
+- can_delete=True: Разрешает удаление связанных объектов через форму.</p>
+<h2 id="customauthenticationform">CustomAuthenticationForm</h2>
+<pre><code class="language-python">class CustomAuthenticationForm(AuthenticationForm):
+    username = forms.CharField(widget=forms.TextInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Username'
+    }))
+    password = forms.CharField(widget=forms.PasswordInput(attrs={
+        'class': 'form-control',
+        'placeholder': 'Password'
+    }))
 </code></pre>
-<p><img alt="" src="../images/mealOptions.png" /></p>
-<h2 id="booking">Booking</h2>
-<ul>
-<li>Фильтрация бронирований по статусу подтверждения, дате создания и туру.</li>
-<li>Поиск по имени пользователя и названию отеля.</li>
-<li>Сортировка бронирований по дате создания (от новых к старым).</li>
-</ul>
-<pre><code class="language-python">@admin.register(Booking)
-class BookingAdmin(admin.ModelAdmin):
-    list_display = ('user', 'tour', 'num_people', 'tariff', 'meal_option', 'is_confirmed', 'total_price', 'created')
-    list_filter = ('is_confirmed', 'created', 'tour')
-    search_fields = ('user__username', 'tour__hotel')
-    ordering = ('-created',)
+<p>Наследуется от AuthenticationForm и кастомизирует поля username и password, добавляя стили и плейсхолдеры для улучшения внешнего вида ввода.</p>
+<h2 id="customusercreationform">CustomUserCreationForm</h2>
+<pre><code class="language-python">class CustomUserCreationForm(UserCreationForm):
+    class Meta:
+        model = CustomUser
+        fields = ['username', 'email', 'password1', 'password2']
 </code></pre>
-<p><img alt="" src="../images/bookings1.png" />
-<img alt="" src="../images/bookings2.png" />
-<img alt="" src="../images/bookings3.png" /></p>
-<h2 id="review">Review</h2>
-<ul>
-<li>Фильтрация отзывов по рейтингу, дате создания и туру.</li>
-<li>Поиск по имени пользователя, названию отеля и тексту отзыва.</li>
-<li>Сортировка отзывов по дате (от новых к старым).</li>
-</ul>
-<pre><code class="language-python">@admin.register(Review)
-class ReviewAdmin(admin.ModelAdmin):
-    list_display = ('user', 'tour', 'rating', 'date', 'text')
-    list_filter = ('rating', 'date', 'tour')
-    search_fields = ('user__username', 'tour__hotel', 'text')
-    ordering = ('-date',)
+<p>Наследуется от UserCreationForm и используется для создания нового пользователя с полями username, email, password1, password2.</p>
+<h2 id="bookingform">BookingForm</h2>
+<pre><code class="language-python">class BookingForm(forms.ModelForm):
+    class Meta:
+        model = Booking
+        fields = ['num_people', 'tariff', 'meal_option']
+
+    def __init__(self, *args, **kwargs):
+        tour = kwargs.pop('tour', None)
+        super().__init__(*args, **kwargs)
+
+        if tour:
+            # Ограничиваем выбор тарифов и вариантов питания
+            self.fields['tariff'].queryset = tour.tariffs.all()
+            self.fields['meal_option'].queryset = tour.meal_options.all()
+
+            self.fields['tariff'].widget = forms.Select(
+                attrs={
+                    'class': 'tariff-select',
+                },
+                choices=[(tariff.id, f'{tariff.name} - {tariff.price} RUB') for tariff in tour.tariffs.all()]
+            )
+            self.fields['meal_option'].widget = forms.Select(
+                attrs={
+                    'class': 'meal-select',
+                },
+                choices=[(meal.id, f'{meal.name} - {meal.price} RUB') for meal in tour.meal_options.all()]
+            )
 </code></pre>
-<p><img alt="" src="../images/review1.png" />
-<img alt="" src="../images/review2.png" />
-<img alt="" src="../images/review3.png" /></p>
+<p>Используется для бронирования тура. Она позволяет выбрать количество людей (num_people), тариф (tariff) и вариант питания (meal_option). В конструкторе формы ограничиваются доступные тарифы и варианты питания в зависимости от выбранного тура.</p>
+<h2 id="reviewform">ReviewForm</h2>
+<pre><code class="language-python">class ReviewForm(forms.ModelForm):
+    class Meta:
+        model = Review
+        fields = ['text', 'rating']
+</code></pre>
+<p>Используется для создания отзыва. Она включает два поля: текст отзыва и рейтинг. Используется для отправки отзыва о туре, который затем сохраняется в базе данных.</p>
+<h2 id="toursearchform">TourSearchForm</h2>
+<pre><code class="language-python">class TourSearchForm(forms.Form):
+    query = forms.CharField(label='Search', max_length=100, required=False)
+</code></pre>
+<p>Предназначена для поиска туров. Она содержит одно поле query, в котором пользователи могут вводить строку для поиска. Поле имеет максимальную длину 100 символов и не является обязательным для заполнения (required=False).</p>
 
 
 
