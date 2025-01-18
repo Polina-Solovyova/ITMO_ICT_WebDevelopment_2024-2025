@@ -1,0 +1,1727 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../models/">
+      
+      
+        <link rel="next" href="../serializers/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Views - Отчёт Web-программирование</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-endpoints-documentation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Отчёт Web-программирование" class="md-header__button md-logo" aria-label="Отчёт Web-программирование" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Отчёт Web-программирование
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Views
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Отчёт Web-программирование" class="md-nav__button md-logo" aria-label="Отчёт Web-программирование" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Отчёт Web-программирование
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/leetcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/forms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/urls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Urls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/leetcode.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Регистрация пользователя
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Вход пользователя
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Выход пользователя
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получить список концертов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получить информацию о концерте
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создание билета
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Обновление, частичное обновление и удаление билета
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создание заказа
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Подтверждение заказа
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создать концерт
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Удалить концерт
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Редактировать концерт
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получить конкретный заказ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Добавить оборудование для концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Удалить оборудование из концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Редактировать оборудование для концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получить оборудование для концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Назначить концерт организатору
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получение всех концертов организатора
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../serializers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../urls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Urls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pr_work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practical Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leetcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Регистрация пользователя
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Вход пользователя
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Выход пользователя
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получить список концертов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получить информацию о концерте
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создание билета
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Обновление, частичное обновление и удаление билета
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создание заказа
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Подтверждение заказа
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создать концерт
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Удалить концерт
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Редактировать концерт
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получить конкретный заказ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      Добавить оборудование для концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      Удалить оборудование из концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      Редактировать оборудование для концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получить оборудование для концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      Назначить концерт организатору
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      Получение всех концертов организатора
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="api-endpoints-documentation">API Endpoints Documentation</h1>
+<h2 id="_1">Регистрация пользователя</h2>
+<p><strong>POST</strong> <code>/register_user/</code>
+- <strong>Summary:</strong> Регистрация пользователя
+- <strong>Description:</strong> Этот эндпоинт позволяет создать нового пользователя в системе, отправив необходимые данные в формате <code>UserRegistrationSerializer</code>.
+- <strong>Request Body:</strong> <code>UserRegistrationSerializer</code>
+- <strong>Responses:</strong>
+  - <code>201</code>: Пользователь успешно зарегистрирован
+  - <code>400</code>: Ошибки валидации
+  - </p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;post&quot;,
+    operation_summary=&quot;Регистрация пользователя&quot;,
+    request_body=UserRegistrationSerializer,
+    responses={201: &quot;Пользователь успешно зарегистрирован&quot;, 400: &quot;Ошибки валидации&quot;},
+)
+@api_view([&quot;POST&quot;])
+@permission_classes([AllowAny])
+def register_user(request):
+    serializer = UserRegistrationSerializer(data=request.data)
+    if serializer.is_valid():
+        if User.objects.filter(username=serializer.validated_data[&quot;username&quot;]).exists():
+            return Response({&quot;error&quot;: &quot;Пользователь с таким именем уже существует&quot;}, status=status.HTTP_400_BAD_REQUEST)
+
+        User.objects.create_user(**serializer.validated_data)
+        return Response({&quot;message&quot;: &quot;Пользователь успешно зарегистрирован&quot;}, status=status.HTTP_201_CREATED)
+
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+</code></pre>
+<h2 id="_2">Вход пользователя</h2>
+<p><strong>POST</strong> <code>/login_user/</code>
+- <strong>Summary:</strong> Вход пользователя
+- <strong>Description:</strong> Этот эндпоинт позволяет пользователю войти в систему, используя свои учетные данные.
+- <strong>Request Body:</strong> <code>UserLoginSerializer</code>
+- <strong>Responses:</strong>
+  - <code>200</code>: Успешный вход
+  - <code>400</code>: Ошибки валидации
+  - <code>401</code>: Неверные учетные данные
+  - </p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;post&quot;,
+    operation_summary=&quot;Вход пользователя&quot;,
+    request_body=UserLoginSerializer,
+    responses={200: &quot;Успешный вход&quot;, 400: &quot;Ошибки валидации&quot;, 401: &quot;Неверные учетные данные&quot;},
+)
+@api_view([&quot;POST&quot;])
+@permission_classes([AllowAny])
+def login_user(request):
+    user = authenticate(username=request.data.get(&quot;username&quot;), password=request.data.get(&quot;password&quot;))
+    if user:
+        refresh = RefreshToken.for_user(user)
+        return Response({&quot;refresh&quot;: str(refresh), &quot;access&quot;: str(refresh.access_token)}, status=status.HTTP_200_OK)
+    return Response({&quot;error&quot;: &quot;Неверное имя пользователя или пароль&quot;}, status=status.HTTP_401_UNAUTHORIZED)
+</code></pre>
+<h2 id="_3">Выход пользователя</h2>
+<p><strong>POST</strong> <code>/logout_user/</code>
+- <strong>Summary:</strong> Выход пользователя
+- <strong>Description:</strong> Этот эндпоинт позволяет пользователю выйти из системы.
+- <strong>Responses:</strong>
+  - <code>200</code>: Выход успешен</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;post&quot;,
+    operation_summary=&quot;Выход пользователя&quot;,
+    responses={200: &quot;Выход успешен&quot;},
+)
+@api_view([&quot;POST&quot;])
+@permission_classes([IsAuthenticated])
+def logout_user(request):
+    request.auth.delete()
+    return Response({&quot;message&quot;: &quot;Вы успешно вышли&quot;}, status=status.HTTP_200_OK)
+</code></pre>
+<h2 id="_4">Получить список концертов</h2>
+<p><strong>GET</strong> <code>/concert_list/</code>
+- <strong>Summary:</strong> Получить список концертов
+- <strong>Description:</strong> Этот эндпоинт возвращает список всех доступных концертов.
+- <strong>Responses:</strong>
+  - <code>200</code>: <code>ConcertSerializer(many=True)</code></p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;get&quot;,
+    operation_summary=&quot;Получить список концертов&quot;,
+    responses={200: ConcertSerializer(many=True)}
+)
+@api_view([&quot;GET&quot;])
+@permission_classes([AllowAny])
+def concert_list(request):
+    concerts = Concert.objects.all()
+    serializer = ConcertSerializer(concerts, many=True)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+</code></pre>
+<h2 id="_5">Получить информацию о концерте</h2>
+<p><strong>GET</strong> <code>/concert_detail/&lt;pk&gt;/</code>
+- <strong>Summary:</strong> Получить информацию о концерте
+- <strong>Description:</strong> Этот эндпоинт предоставляет подробную информацию о конкретном концерте по его идентификатору.
+- <strong>Responses:</strong>
+  - <code>200</code>: <code>ConcertDetailSerializer</code>
+  - <code>404</code>: Концерт не найден</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;get&quot;,
+    operation_summary=&quot;Получить информацию о концерте&quot;,
+    responses={200: ConcertDetailSerializer, 404: &quot;Концерт не найден&quot;}
+)
+@api_view([&quot;GET&quot;])
+@permission_classes([AllowAny])
+def concert_detail(request, pk):
+    try:
+        concert = Concert.objects.get(pk=pk)
+    except Concert.DoesNotExist:
+        return Response({&quot;error&quot;: &quot;Концерт не найден&quot;}, status=status.HTTP_404_NOT_FOUND)
+
+    serializer = ConcertDetailSerializer(concert)
+    return Response(serializer.data, status=status.HTTP_200_OK)
+</code></pre>
+<h2 id="_6">Создание билета</h2>
+<p><strong>POST</strong> <code>/ticket_list_create/</code>
+- <strong>Summary:</strong> Создание билета
+- <strong>Description:</strong> Этот эндпоинт позволяет пользователям создавать новый билет для концерта.
+- <strong>Request Body:</strong> <code>TicketCreateSerializer</code>
+- <strong>Responses:</strong>
+  - <code>201</code>: <code>TicketSerializer</code>
+  - <code>400</code>: Ошибки валидации
+  - <code>403</code>: Недостаточно прав</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;post&quot;,
+    operation_summary=&quot;Создание билета&quot;,
+    request_body=TicketCreateSerializer,
+    responses={201: TicketSerializer, 400: &quot;Ошибки валидации&quot;, 403: &quot;Недостаточно прав&quot;}
+)
+@api_view([&quot;POST&quot;])
+@permission_classes([AllowAny])
+def ticket_list_create(request):
+    serializer = TicketCreateSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+</code></pre>
+<h2 id="_7">Обновление, частичное обновление и удаление билета</h2>
+<p><strong>GET, PUT, PATCH, DELETE</strong> <code>/ticket_detail/&lt;pk&gt;/</code>
+- <strong>Summary:</strong> Получение, обновление, или удаление билета
+- <strong>Description:</strong> Этот эндпоинт позволяет пользователям просматривать, обновлять или удалять билет по его идентификатору.
+- <strong>Request Body (for PUT, PATCH):</strong> <code>TicketSerializer</code>
+- <strong>Responses:</strong>
+  - <code>200</code>: <code>TicketSerializer</code>
+  - <code>204</code>: Билет удален
+  - <code>400</code>: Ошибки валидации
+  - <code>403</code>: Недостаточно прав
+  - <code>404</code>: Билет не найден</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;put&quot;,
+    operation_summary=&quot;Обновление билета&quot;,
+    request_body=TicketSerializer,
+    responses={200: TicketSerializer, 400: &quot;Ошибки валидации&quot;, 403: &quot;Недостаточно прав&quot;, 404: &quot;Билет не найден&quot;}
+)
+@swagger_auto_schema(
+    method=&quot;patch&quot;,
+    operation_summary=&quot;Частичное обновление билета&quot;,
+    request_body=TicketSerializer,
+    responses={200: TicketSerializer, 400: &quot;Ошибки валидации&quot;, 403: &quot;Недостаточно прав&quot;, 404: &quot;Билет не найден&quot;}
+)
+@swagger_auto_schema(
+    method=&quot;delete&quot;,
+    operation_summary=&quot;Удаление билета&quot;,
+    responses={204: &quot;Билет удален&quot;, 403: &quot;Недостаточно прав&quot;, 404: &quot;Билет не найден&quot;}
+)
+@swagger_auto_schema(
+    method=&quot;get&quot;,
+    operation_summary=&quot;Получение информации о билете&quot;,
+    responses={200: TicketSerializer, 404: &quot;Билет не найден&quot;}
+)
+@api_view([&quot;GET&quot;, &quot;PUT&quot;, &quot;PATCH&quot;, &quot;DELETE&quot;])
+@permission_classes([AllowAny])
+def ticket_detail(request, pk):
+    try:
+        ticket = Ticket.objects.get(pk=pk)
+    except Ticket.DoesNotExist:
+        return Response({&quot;error&quot;: &quot;Билет не найден&quot;}, status=status.HTTP_404_NOT_FOUND)
+
+    if request.method == &quot;GET&quot;:
+        return Response(TicketSerializer(ticket).data)
+
+    if not request.user.is_staff:
+        return Response({&quot;error&quot;: &quot;Недостаточно прав&quot;}, status=status.HTTP_403_FORBIDDEN)
+
+    if request.method in [&quot;PUT&quot;, &quot;PATCH&quot;]:
+        serializer = TicketSerializer(ticket, data=request.data, partial=(request.method == &quot;PATCH&quot;))
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+    ticket.delete()
+    return Response(status=status.HTTP_204_NO_CONTENT)
+</code></pre>
+<h2 id="_8">Создание заказа</h2>
+<p><strong>POST</strong> <code>/order_list_create/</code>
+- <strong>Summary:</strong> Создание заказа
+- <strong>Description:</strong> Этот эндпоинт позволяет пользователю создавать новый заказ на билеты для концерта.
+- <strong>Request Body:</strong> <code>OrderCreationSerializer</code>
+- <strong>Responses:</strong>
+  - <code>201</code>: <code>OrderCreationSerializer</code>
+  - <code>400</code>: Ошибки валидации</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;post&quot;,
+    operation_summary=&quot;Создание заказа&quot;,
+    request_body=OrderCreationSerializer,
+    responses={201: OrderCreationSerializer, 400: &quot;Ошибки валидации&quot;}
+)
+@api_view([&quot;POST&quot;])
+@permission_classes([IsAuthenticated])
+def order_list_create(request):
+    serializer = OrderCreationSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save(user=request.user)
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+</code></pre>
+<h2 id="_9">Подтверждение заказа</h2>
+<p><strong>POST</strong> <code>/confirm_order/&lt;pk&gt;/</code>
+- <strong>Summary:</strong> Подтверждение заказа
+- <strong>Description:</strong> Этот эндпоинт позволяет администраторам подтверждать заказы пользователей.
+- <strong>Responses:</strong>
+  - <code>200</code>: Заказ подтвержден
+  - <code>404</code>: Заказ не найден</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;post&quot;,
+    operation_summary=&quot;Подтверждение заказа&quot;,
+    responses={200: &quot;Заказ подтвержден&quot;, 404: &quot;Заказ не найден&quot;}
+)
+@api_view([&quot;POST&quot;])
+@permission_classes([IsAdminUser])
+def confirm_order(request, pk):
+    try:
+        order = Order.objects.get(pk=pk)
+    except Order.DoesNotExist:
+        return Response({&quot;error&quot;: &quot;Заказ не найден&quot;}, status=status.HTTP_404_NOT_FOUND)
+
+    order.status = &quot;confirmed&quot;
+    order.save()
+    return Response({&quot;status&quot;: &quot;Order confirmed&quot;}, status=status.HTTP_200_OK)
+</code></pre>
+<h2 id="_10">Создать концерт</h2>
+<p><strong>POST</strong> <code>/create_concert/</code>
+- <strong>Summary:</strong> Создать концерт
+- <strong>Description:</strong> Этот эндпоинт позволяет администраторам добавлять новый концерт в систему.
+- <strong>Request Body:</strong> <code>ConcertSerializer</code>
+- <strong>Responses:</strong>
+  - <code>201</code>: <code>ConcertSerializer</code>
+  - <code>400</code>: Ошибки валидации</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;post&quot;,
+    operation_summary=&quot;Создать концерт&quot;,
+    request_body=ConcertSerializer,
+    responses={201: ConcertSerializer, 400: &quot;Ошибки валидации&quot;}
+)
+@api_view([&quot;POST&quot;])
+@permission_classes([IsAdminUser])
+def create_concert(request):
+    serializer = ConcertSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+</code></pre>
+<h2 id="_11">Удалить концерт</h2>
+<p><strong>DELETE</strong> <code>/delete_concert/&lt;pk&gt;/</code>
+- <strong>Summary:</strong> Удалить концерт
+- <strong>Description:</strong> Этот эндпоинт позволяет администраторам удалять концерт по его идентификатору.
+- <strong>Responses:</strong>
+  - <code>204</code>: Концерт удален
+  - <code>404</code>: Концерт не найден</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;delete&quot;,
+    operation_summary=&quot;Удалить концерт&quot;,
+    responses={204: &quot;Концерт удален&quot;, 404: &quot;Концерт не найден&quot;}
+)
+@api_view([&quot;DELETE&quot;])
+@permission_classes([IsAdminUser])
+def delete_concert(request, pk):
+    try:
+        concert = Concert.objects.get(pk=pk)
+        concert.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    except Concert.DoesNotExist:
+        return Response({&quot;error&quot;: &quot;Концерт не найден&quot;}, status=status.HTTP_404_NOT_FOUND)
+</code></pre>
+<h2 id="_12">Редактировать концерт</h2>
+<p><strong>PUT</strong> <code>/update_concert/&lt;pk&gt;/</code>
+- <strong>Summary:</strong> Редактировать концерт
+- <strong>Description:</strong> Этот эндпоинт позволяет администраторам обновлять информацию о существующем концерте.
+- <strong>Request Body:</strong> <code>ConcertSerializer</code>
+- <strong>Responses:</strong>
+  - <code>200</code>: <code>ConcertSerializer</code>
+  - <code>400</code>: Ошибки валидации
+  - <code>404</code>: Концерт не найден</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;put&quot;,
+    operation_summary=&quot;Редактировать концерт&quot;,
+    request_body=ConcertSerializer,
+    responses={200: ConcertSerializer, 400: &quot;Ошибки валидации&quot;, 404: &quot;Концерт не найден&quot;}
+)
+@api_view([&quot;PUT&quot;])
+@permission_classes([IsAdminUser])
+def update_concert(request, pk):
+    try:
+        concert = Concert.objects.get(pk=pk)
+    except Concert.DoesNotExist:
+        return Response({&quot;error&quot;: &quot;Концерт не найден&quot;}, status=status.HTTP_404_NOT_FOUND)
+
+    serializer = ConcertSerializer(concert, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+</code></pre>
+<h2 id="_13">Получить конкретный заказ</h2>
+<p><strong>GET</strong> <code>/get_order/&lt;pk&gt;/</code>
+- <strong>Summary:</strong> Получить конкретный заказ
+- <strong>Description:</strong> Этот эндпоинт предоставляет информацию о конкретном заказе по его идентификатору.
+- <strong>Responses:</strong>
+  - <code>200</code>: <code>OrderSerializer</code>
+  - <code>404</code>: Заказ не найден</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;get&quot;,
+    operation_summary=&quot;Получить конкретный заказ&quot;,
+    responses={200: OrderSerializer, 404: &quot;Заказ не найден&quot;}
+)
+@api_view([&quot;GET&quot;])
+@permission_classes([IsAuthenticated])
+def get_order(request, pk):
+    try:
+        order = Order.objects.get(pk=pk)
+        return Response(OrderSerializer(order).data)
+    except Order.DoesNotExist:
+        return Response({&quot;error&quot;: &quot;Заказ не найден&quot;}, status=status.HTTP_404_NOT_FOUND)
+</code></pre>
+<h2 id="_14">Добавить оборудование для концерта</h2>
+<p><strong>POST</strong> <code>/add_equipment_to_concert/</code>
+- <strong>Summary:</strong> Добавить оборудование для концерта
+- <strong>Description:</strong> Этот эндпоинт позволяет администраторам добавлять оборудование к конкретному концерту.
+- <strong>Request Body:</strong> <code>ConcertEquipmentSerializer</code>
+- <strong>Responses:</strong>
+  - <code>201</code>: <code>ConcertEquipmentSerializer</code>
+  - <code>400</code>: Ошибки валидации</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;post&quot;,
+    operation_summary=&quot;Добавить оборудование для концерта&quot;,
+    request_body=ConcertEquipmentSerializer,
+    responses={201: ConcertEquipmentSerializer, 400: &quot;Ошибки валидации&quot;}
+)
+@api_view([&quot;POST&quot;])
+@permission_classes([IsAdminUser])
+def add_equipment_to_concert(request):
+    serializer = ConcertEquipmentSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+</code></pre>
+<h2 id="_15">Удалить оборудование из концерта</h2>
+<p><strong>DELETE</strong> <code>/remove_equipment_from_concert/&lt;pk&gt;/</code>
+- <strong>Summary:</strong> Удалить оборудование из концерта
+- <strong>Description:</strong> Этот эндпоинт позволяет администраторам удалять оборудование из концерта по его идентификатору.
+- <strong>Responses:</strong>
+  - <code>204</code>: Оборудование удалено
+  - <code>404</code>: Оборудование не найдено</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;delete&quot;,
+    operation_summary=&quot;Удалить оборудование из концерта&quot;,
+    responses={204: &quot;Оборудование удалено&quot;, 404: &quot;Оборудование не найдено&quot;}
+)
+@api_view([&quot;DELETE&quot;])
+@permission_classes([IsAdminUser])
+def remove_equipment_from_concert(request, pk):
+    try:
+        equipment = ConcertEquipment.objects.get(pk=pk)
+        equipment.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
+    except ConcertEquipment.DoesNotExist:
+        return Response({&quot;error&quot;: &quot;Оборудование не найдено&quot;}, status=status.HTTP_404_NOT_FOUND)
+</code></pre>
+<h2 id="_16">Редактировать оборудование для концерта</h2>
+<p><strong>PUT</strong> <code>/update_equipment_for_concert/&lt;pk&gt;/</code>
+- <strong>Summary:</strong> Редактировать оборудование для концерта
+- <strong>Description:</strong> Этот эндпоинт позволяет администраторам обновлять информацию об оборудовании для концерта.
+- <strong>Request Body:</strong> <code>ConcertEquipmentSerializer</code>
+- <strong>Responses:</strong>
+  - <code>200</code>: <code>ConcertEquipmentSerializer</code>
+  - <code>400</code>: Ошибки валидации
+  - <code>404</code>: Оборудование не найдено</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;put&quot;,
+    operation_summary=&quot;Редактировать оборудование для концерта&quot;,
+    request_body=ConcertEquipmentSerializer,
+    responses={200: ConcertEquipmentSerializer, 400: &quot;Ошибки валидации&quot;, 404: &quot;Оборудование не найдено&quot;}
+)
+@api_view([&quot;PUT&quot;])
+@permission_classes([IsAdminUser])
+def update_equipment_for_concert(request, pk):
+    try:
+        equipment = ConcertEquipment.objects.get(pk=pk)
+    except ConcertEquipment.DoesNotExist:
+        return Response({&quot;error&quot;: &quot;Оборудование не найдено&quot;}, status=status.HTTP_404_NOT_FOUND)
+
+    serializer = ConcertEquipmentSerializer(equipment, data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data)
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+</code></pre>
+<h2 id="_17">Получить оборудование для концерта</h2>
+<p><strong>GET</strong> <code>/get_equipment_for_concert/&lt;concert_id&gt;/</code>
+- <strong>Summary:</strong> Получить оборудование для концерта
+- <strong>Description:</strong> Этот эндпоинт предоставляет список оборудования, назначенного для конкретного концерта.
+- <strong>Responses:</strong>
+  - <code>200</code>: <code>ConcertEquipmentSerializer(many=True)</code>
+  - <code>404</code>: Концерт не найден</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;get&quot;,
+    operation_summary=&quot;Получить оборудование для концерта&quot;,
+    responses={200: ConcertEquipmentSerializer(many=True), 404: &quot;Концерт не найден&quot;}
+)
+@api_view([&quot;GET&quot;])
+@permission_classes([IsAdminUser])
+def get_equipment_for_concert(request, concert_id):
+    try:
+        concert = Concert.objects.get(pk=concert_id)
+    except Concert.DoesNotExist:
+        return Response({&quot;error&quot;: &quot;Концерт не найден&quot;}, status=status.HTTP_404_NOT_FOUND)
+
+    concert_equipment = ConcertEquipment.objects.filter(concert=concert)
+    return Response(ConcertEquipmentSerializer(concert_equipment, many=True).data)
+</code></pre>
+<h2 id="_18">Назначить концерт организатору</h2>
+<p><strong>POST</strong> <code>/assign_concert/&lt;pk&gt;/</code>
+- <strong>Summary:</strong> Назначить концерт организатору
+- <strong>Description:</strong> Этот эндпоинт позволяет назначить концерт определенному организатору.
+- <strong>Request Body:</strong> <code>OrganizerSerializer</code>
+- <strong>Responses:</strong>
+  - <code>200</code>: Концерт успешно назначен организатору
+  - <code>400</code>: Ошибка в запросе
+  - <code>404</code>: Концерт не найден
+  - <code>403</code>: Недостаточно прав</p>
+<pre><code class="language-python">@swagger_auto_schema(
+    method=&quot;post&quot;,
+    operation_summary=&quot;Назначить концерт организатору&quot;,
+    request_body=OrganizerSerializer,
+    responses={
+        200: &quot;Концерт успешно назначен организатору&quot;,
+        400: &quot;Ошибка в запросе&quot;,
+        404: &quot;Концерт не найден&quot;,
+        403: &quot;Недостаточно прав&quot;
+    }
+)
+@api_view([&quot;POST&quot;])
+@permission_classes([IsAdminUser])
+def assign_concert(request, pk=None):
+    if not hasattr(request.user, &quot;employee&quot;):
+        return Response({&quot;error&quot;: &quot;У пользователя нет связанного сотрудника&quot;}, status=status.HTTP_403_FORBIDDEN)
+
+    try:
+        concert = Concert.objects.get(pk=pk)
+    except Concert.DoesNotExist:
+        return Response({&quot;error&quot;: &quot;Концерт не найден&quot;}, status=status.HTTP_404_NOT_FOUND)
+
+    try:
+        Organizer.objects.create(employee=request.user.employee, concert=concert)
+    except Exception as e:
+        return Response({&quot;error&quot;: f&quot;Ошибка при назначении концерта: {str(e)}&quot;}, status=status.HTTP_400_BAD_REQUEST)
+
+    return Response({&quot;status&quot;: &quot;Концерт успешно назначен организатору&quot;}, status=status.HTTP_200_OK)
+</code></pre>
+<h2 id="_19">Получение всех концертов организатора</h2>
+<p><strong>GET</strong> <code>/get_organizer_concerts/</code>
+- <strong>Summary:</strong> Получение всех концертов организатора
+- <strong>Description:</strong> Этот эндпоинт возвращает список всех концертов, назначенных текущему организатору.
+- <strong>Responses:</strong>
+  - <code>200</code>: <code>ConcertDetailSerializer(many=True)</code>
+  - <code>403</code>: Недостаточно прав
+  - <code>400</code>: Ошибка запроса</p>
+<p>```python
+@swagger_auto_schema(
+    method="get",
+    operation_summary="Получение всех концертов организатора",
+    responses={
+        200: ConcertDetailSerializer(many=True),
+        403: "Недостаточно прав",
+        400: "Ошибка запроса"
+    }
+)
+@api_view(["GET"])
+@permission_classes([IsAdminUser])
+def get_organizer_concerts(request):
+    if not hasattr(request.user, "employee"):
+        return Response({"error": "Пользователь не является сотрудником"}, status=status.HTTP_403</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
