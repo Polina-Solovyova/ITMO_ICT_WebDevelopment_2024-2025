@@ -1,0 +1,1544 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../lr3/leetcode/">
+      
+      
+        <link rel="next" href="../components/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Pages - Отчёт Web-программирование</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Отчёт Web-программирование" class="md-header__button md-logo" aria-label="Отчёт Web-программирование" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Отчёт Web-программирование
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pages
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Отчёт Web-программирование" class="md-nav__button md-logo" aria-label="Отчёт Web-программирование" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Отчёт Web-программирование
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/leetcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/forms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/urls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Urls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/leetcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/serializers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/urls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Urls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/pr_work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practical Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/leetcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Pages
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Pages
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Станица регистрации
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Станица входа
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Страница концертов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Страница концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Страница покупки билета
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Страница заказов пользователя
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Админ панель
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../components/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Components
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leetcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Станица регистрации
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Станица входа
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Страница концертов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Страница концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Страница покупки билета
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Страница заказов пользователя
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Админ панель
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">Страницы</h1>
+<h2 id="_2">Станица регистрации</h2>
+<pre><code class="language-js">import React, { useState } from 'react';
+import axios from 'axios';
+import { useNavigate, Link } from 'react-router-dom';
+
+const RegisterPage = () =&gt; {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) =&gt; {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8000/auth/register/', {
+        username,
+        email,
+        password
+      });
+      setSuccess('Регистрация успешна! Теперь вы можете войти.');
+      setError(null);
+      setTimeout(() =&gt; navigate('/login'), 2000);
+    } catch (err) {
+      setError('Ошибка регистрации. Возможно, имя пользователя уже занято.');
+      setSuccess(null);
+    }
+  };
+
+  return (
+    &lt;div className=&quot;container d-flex justify-content-center align-items-center vh-100&quot;&gt;
+      &lt;div className=&quot;card p-4 shadow&quot; style={{ width: '300px' }}&gt;
+        &lt;h2 className=&quot;text-center&quot;&gt;Регистрация&lt;/h2&gt;
+        &lt;form onSubmit={handleSubmit}&gt;
+          &lt;div className=&quot;mb-3&quot;&gt;
+            &lt;input className=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Имя пользователя&quot; value={username} onChange={(e) =&gt; setUsername(e.target.value)} required /&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;mb-3&quot;&gt;
+            &lt;input className=&quot;form-control&quot; type=&quot;email&quot; placeholder=&quot;Email&quot; value={email} onChange={(e) =&gt; setEmail(e.target.value)} /&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;mb-3&quot;&gt;
+            &lt;input className=&quot;form-control&quot; type=&quot;password&quot; placeholder=&quot;Пароль&quot; value={password} onChange={(e) =&gt; setPassword(e.target.value)} required /&gt;
+          &lt;/div&gt;
+          &lt;button className=&quot;btn btn-primary w-100&quot; type=&quot;submit&quot;&gt;Зарегистрироваться&lt;/button&gt;
+        &lt;/form&gt;
+        {error &amp;&amp; &lt;p className=&quot;text-danger text-center mt-2&quot;&gt;{error}&lt;/p&gt;}
+        {success &amp;&amp; &lt;p className=&quot;text-success text-center mt-2&quot;&gt;{success}&lt;/p&gt;}
+        &lt;p className=&quot;text-center mt-3&quot;&gt;Уже есть аккаунт? &lt;Link to=&quot;/login&quot;&gt;Войти&lt;/Link&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default RegisterPage;
+
+</code></pre>
+<p><img alt="img.png" src="../img.png" /></p>
+<h2 id="_3">Станица входа</h2>
+<pre><code class="language-js">import React, { useState } from 'react';
+import axios from 'axios';
+import {Link, useNavigate} from &quot;react-router-dom&quot;;
+
+const LoginPage = () =&gt; {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+
+  const handleSubmit = async (e) =&gt; {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8000/auth/login/', { username, password });
+      const response2 = await axios.post('http://localhost:8000/auth/token/token/login', { username, password });
+      localStorage.setItem('access_token', response.data.access);
+      localStorage.setItem('refresh_token', response.data.refresh);
+      localStorage.setItem('token', response2.data.auth_token)
+      console.log(response2)
+      setError(null);
+      navigate(&quot;/&quot;);
+    } catch (err) {
+      setError('Неверное имя пользователя или пароль');
+    }
+  };
+
+  return (
+    &lt;div className=&quot;container d-flex justify-content-center align-items-center vh-100&quot;&gt;
+      &lt;div className=&quot;card p-4 shadow&quot; style={{width: '300px'}}&gt;
+        &lt;h2 className=&quot;text-center&quot;&gt;Вход&lt;/h2&gt;
+        &lt;form onSubmit={handleSubmit}&gt;
+          &lt;div className=&quot;mb-3&quot;&gt;
+            &lt;input className=&quot;form-control&quot; type=&quot;text&quot; placeholder=&quot;Имя пользователя&quot; value={username}
+                   onChange={(e) =&gt; setUsername(e.target.value)}/&gt;
+          &lt;/div&gt;
+          &lt;div className=&quot;mb-3&quot;&gt;
+            &lt;input className=&quot;form-control&quot; type=&quot;password&quot; placeholder=&quot;Пароль&quot; value={password}
+                   onChange={(e) =&gt; setPassword(e.target.value)}/&gt;
+          &lt;/div&gt;
+          &lt;button className=&quot;btn btn-primary w-100&quot; type=&quot;submit&quot;&gt;Войти&lt;/button&gt;
+        &lt;/form&gt;
+        {error &amp;&amp; &lt;p className=&quot;text-danger text-center mt-2&quot;&gt;{error}&lt;/p&gt;}
+        &lt;p className=&quot;text-center mt-3&quot;&gt;Впервые здесь? &lt;Link to=&quot;/register&quot;&gt;Зарегистрироваться&lt;/Link&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default LoginPage;
+</code></pre>
+<p><img alt="img_1.png" src="../img_1.png" /></p>
+<h2 id="_4">Страница концертов</h2>
+<pre><code class="language-js">import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import ConcertCard from '../components/ConcertCard';
+
+const HomePage = () =&gt; {
+  const [concerts, setConcerts] = useState([]);
+
+  useEffect(() =&gt; {
+    const fetchConcerts = async () =&gt; {
+      try {
+        const response = await axios.get('http://localhost:8000/concerts/');
+        setConcerts(response.data);
+      } catch (error) {
+        console.error('Error fetching concerts', error);
+      }
+    };
+    fetchConcerts();
+  }, []);
+
+  const upcomingConcerts = concerts.filter(concert =&gt; concert.status === 'prepared');
+  const pastConcerts = concerts.filter(concert =&gt; concert.status === 'held');
+
+  return (
+    &lt;div&gt;
+      &lt;main className=&quot;container mt-4&quot;&gt;
+        &lt;h2 className=&quot;mt-5 mb-3&quot;&gt;Предстоящие концерты&lt;/h2&gt;
+        &lt;div className=&quot;row gx-4 mt-2&quot;&gt;
+          {upcomingConcerts.map(concert =&gt; (
+              &lt;div className=&quot;col-md-4 col-sm-6 mb-4&quot; key={concert.id}&gt;
+                &lt;ConcertCard concert={concert}/&gt;
+              &lt;/div&gt;
+          ))}
+        &lt;/div&gt;
+
+        &lt;h2 className=&quot;mt-5 mb-3&quot;&gt;Прошедшие концерты&lt;/h2&gt;
+        &lt;div className=&quot;row gx-4 mt-2&quot;&gt;
+          {pastConcerts.map(concert =&gt; (
+              &lt;div className=&quot;col-md-4 col-sm-6 mb-4&quot; key={concert.id}&gt;
+                &lt;ConcertCard concert={concert}/&gt;
+              &lt;/div&gt;
+          ))}
+        &lt;/div&gt;
+      &lt;/main&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default HomePage;
+</code></pre>
+<p><img alt="img_2.png" src="../img_2.png" />
+<img alt="img_3.png" src="../img_3.png" /></p>
+<h2 id="_5">Страница концерта</h2>
+<pre><code class="language-js">import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import { formatInTimeZone } from 'date-fns-tz';
+import { ru } from 'date-fns/locale';
+
+const ConcertDetail = () =&gt; {
+  const { id } = useParams();
+  const [concert, setConcert] = useState(null);
+
+  useEffect(() =&gt; {
+    const fetchConcert = async () =&gt; {
+      try {
+        const response = await axios.get(`http://localhost:8000/concerts/${id}/`);
+        setConcert(response.data);
+      } catch (error) {
+        console.error('Error fetching concert details', error);
+      }
+    };
+    fetchConcert();
+  }, [id]);
+
+  if (!concert) return &lt;div&gt;Loading...&lt;/div&gt;;
+
+  const timeZone = 'Europe/Moscow';
+  const dateObj = new Date(concert.date);
+  const timeObj = new Date(`${concert.date}T${concert.time}`);
+  const formattedDate = formatInTimeZone(dateObj, timeZone, &quot;d MMMM&quot;, { locale: ru });
+  const formattedTime = formatInTimeZone(timeObj, timeZone, &quot;HH:mm&quot;, { locale: ru });
+ console.log(concert.tickets)
+  return (
+    &lt;div className=&quot;container mt-4&quot;&gt;
+      &lt;img
+        src={concert.image}
+        className=&quot;card-img-top&quot;
+        alt={concert.title}
+        style={{ width: '100%', height: '300px', objectFit: 'cover' }}
+      /&gt;
+      &lt;h1 className=&quot;mt-2&quot;&gt;{concert.title}&lt;/h1&gt;
+      &lt;p&gt;{formattedDate}, {formattedTime} • {concert.age_limit}+&lt;/p&gt;
+      &lt;p&gt;{concert.description}&lt;/p&gt;
+
+      {concert.status !== 'held' &amp;&amp; (
+        concert.tickets?.length &gt; 0 ? (
+            &lt;div&gt;
+                &lt;h3&gt;Доступные билеты&lt;/h3&gt;
+                &lt;div style={{overflowX: 'auto', whiteSpace: 'nowrap', paddingBottom: '10px'}}&gt;
+                    &lt;div className=&quot;d-flex mt-2&quot; style={{gap: '10px', flexWrap: 'nowrap'}}&gt;
+                        {concert.tickets.map(ticket =&gt; (
+                            &lt;div className=&quot;card&quot; key={ticket.id} style={{width: '300px', flex: '0 0 auto'}}&gt;
+                                &lt;div className=&quot;card-body&quot;&gt;
+                                    &lt;h5 className=&quot;card-title&quot;&gt;{ticket.name}&lt;/h5&gt;
+                                    &lt;p className=&quot;card-text&quot;&gt;&lt;strong&gt;Цена:&lt;/strong&gt; {ticket.price} ₽&lt;/p&gt;
+                                    &lt;p className=&quot;card-text&quot;&gt;&lt;strong&gt;Осталось
+                                        билетов:&lt;/strong&gt; {ticket.available_quantity}&lt;/p&gt;
+                                    &lt;a href={`/orders/${ticket.id}`} className=&quot;btn btn-primary&quot;&gt;Купить билет&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        ))}
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        ) : (
+            &lt;p&gt;Билеты недоступны для этого концерта.&lt;/p&gt;
+        )
+      )}
+    &lt;/div&gt;
+  );
+};
+
+export default ConcertDetail;
+
+</code></pre>
+<p><img alt="img_4.png" src="../img_4.png" /></p>
+<h2 id="_6">Страница покупки билета</h2>
+<pre><code class="language-js">import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import { formatInTimeZone } from 'date-fns-tz';
+import { ru } from 'date-fns/locale';
+
+const ConcertDetail = () =&gt; {
+  const { id } = useParams();
+  const [concert, setConcert] = useState(null);
+
+  useEffect(() =&gt; {
+    const fetchConcert = async () =&gt; {
+      try {
+        const response = await axios.get(`http://localhost:8000/concerts/${id}/`);
+        setConcert(response.data);
+      } catch (error) {
+        console.error('Error fetching concert details', error);
+      }
+    };
+    fetchConcert();
+  }, [id]);
+
+  if (!concert) return &lt;div&gt;Loading...&lt;/div&gt;;
+
+  const timeZone = 'Europe/Moscow';
+  const dateObj = new Date(concert.date);
+  const timeObj = new Date(`${concert.date}T${concert.time}`);
+  const formattedDate = formatInTimeZone(dateObj, timeZone, &quot;d MMMM&quot;, { locale: ru });
+  const formattedTime = formatInTimeZone(timeObj, timeZone, &quot;HH:mm&quot;, { locale: ru });
+ console.log(concert.tickets)
+  return (
+    &lt;div className=&quot;container mt-4&quot;&gt;
+      &lt;img
+        src={concert.image}
+        className=&quot;card-img-top&quot;
+        alt={concert.title}
+        style={{ width: '100%', height: '300px', objectFit: 'cover' }}
+      /&gt;
+      &lt;h1 className=&quot;mt-2&quot;&gt;{concert.title}&lt;/h1&gt;
+      &lt;p&gt;{formattedDate}, {formattedTime} • {concert.age_limit}+&lt;/p&gt;
+      &lt;p&gt;{concert.description}&lt;/p&gt;
+
+      {concert.status !== 'held' &amp;&amp; (
+        concert.tickets?.length &gt; 0 ? (
+            &lt;div&gt;
+                &lt;h3&gt;Доступные билеты&lt;/h3&gt;
+                &lt;div style={{overflowX: 'auto', whiteSpace: 'nowrap', paddingBottom: '10px'}}&gt;
+                    &lt;div className=&quot;d-flex mt-2&quot; style={{gap: '10px', flexWrap: 'nowrap'}}&gt;
+                        {concert.tickets.map(ticket =&gt; (
+                            &lt;div className=&quot;card&quot; key={ticket.id} style={{width: '300px', flex: '0 0 auto'}}&gt;
+                                &lt;div className=&quot;card-body&quot;&gt;
+                                    &lt;h5 className=&quot;card-title&quot;&gt;{ticket.name}&lt;/h5&gt;
+                                    &lt;p className=&quot;card-text&quot;&gt;&lt;strong&gt;Цена:&lt;/strong&gt; {ticket.price} ₽&lt;/p&gt;
+                                    &lt;p className=&quot;card-text&quot;&gt;&lt;strong&gt;Осталось
+                                        билетов:&lt;/strong&gt; {ticket.available_quantity}&lt;/p&gt;
+                                    &lt;a href={`/orders/${ticket.id}`} className=&quot;btn btn-primary&quot;&gt;Купить билет&lt;/a&gt;
+                                &lt;/div&gt;
+                            &lt;/div&gt;
+                        ))}
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        ) : (
+            &lt;p&gt;Билеты недоступны для этого концерта.&lt;/p&gt;
+        )
+      )}
+    &lt;/div&gt;
+  );
+};
+
+export default ConcertDetail;
+
+</code></pre>
+<p><img alt="img_5.png" src="../img_5.png" /></p>
+<h2 id="_7">Страница заказов пользователя</h2>
+<pre><code class="language-js">import React, { useEffect, useState } from &quot;react&quot;;
+import { useNavigate } from &quot;react-router-dom&quot;;
+import axios from &quot;axios&quot;;
+
+const statusColors = {
+  confirmed: &quot;bg-success&quot;,
+  pending: &quot;bg-warning&quot;,
+  returned: &quot;bg-danger&quot;
+};
+
+const statusLabels = {
+  confirmed: &quot;Подтверждено&quot;,
+  pending: &quot;В ожидании&quot;,
+  returned: &quot;Возврат&quot;
+};
+
+const UserProfile = () =&gt; {
+  const [orders, setOrders] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() =&gt; {
+    const fetchOrders = async () =&gt; {
+      try {
+        const response = await axios.get(&quot;http://localhost:8000/orders/my/&quot;, {
+          headers: { Authorization: `Token ${localStorage.getItem(&quot;token&quot;)}` },
+        });
+        setOrders(response.data);
+      } catch (error) {
+        console.error(&quot;Ошибка при загрузке заказов:&quot;, error);
+      }
+    };
+
+    fetchOrders();
+  }, []);
+
+  return (
+    &lt;div className=&quot;container mt-4&quot;&gt;
+      &lt;h2&gt;Мои билеты&lt;/h2&gt;
+      {orders.length &gt; 0 ? (
+        &lt;ul className=&quot;list-group mt-2&quot;&gt;
+          {orders.map(order =&gt; (
+            &lt;li
+              key={order.id}
+              className=&quot;list-group-item d-flex justify-content-between align-items-center&quot;
+              onClick={() =&gt; navigate(`/concerts/${order.concert.id}`)}
+              style={{ cursor: &quot;pointer&quot; }}
+            &gt;
+              &lt;div&gt;
+                &lt;p className=&quot;mb-1&quot;&gt;&lt;strong&gt;{order.concert.title}&lt;/strong&gt; - {order.ticket.name}&lt;/p&gt;
+                &lt;p className=&quot;mb-1&quot;&gt;Количество: {order.quantity} ({order.ticket.price * order.quantity} ₽)&lt;/p&gt;
+              &lt;/div&gt;
+              &lt;span className={`badge ${statusColors[order.status]} text-white p-2`}&gt;
+                {statusLabels[order.status]}
+              &lt;/span&gt;
+            &lt;/li&gt;
+          ))}
+        &lt;/ul&gt;
+      ) : (
+        &lt;p&gt;У вас пока нет заказов.&lt;/p&gt;
+      )}
+    &lt;/div&gt;
+  );
+};
+
+export default UserProfile;
+
+</code></pre>
+<p><img alt="img_6.png" src="../img_6.png" /></p>
+<h2 id="_8">Админ панель</h2>
+<pre><code class="language-js">import React, { useState } from 'react';
+import { Tab, Tabs } from 'react-bootstrap';
+import CreateConcert from '../components/CreateConcert';
+import Organization from '../components/Organization';
+import MyConcerts from '../components/MyConcerts';
+import OrderConfirmation from '../components/OrderConfirmation';
+import SalesReport from '../components/SalesReport';
+
+const AdminDashboard = () =&gt; {
+  const [key, setKey] = useState('createConcert');
+
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;Админ Панель&lt;/h1&gt;
+      &lt;Tabs activeKey={key} onSelect={(k) =&gt; setKey(k)} id=&quot;admin-tabs&quot;&gt;
+        &lt;Tab eventKey=&quot;createConcert&quot; title=&quot;Создать концерт&quot;&gt;
+          &lt;CreateConcert /&gt;
+        &lt;/Tab&gt;
+        &lt;Tab eventKey=&quot;organization&quot; title=&quot;Организация&quot;&gt;
+          &lt;Organization /&gt;
+        &lt;/Tab&gt;
+        &lt;Tab eventKey=&quot;myConcerts&quot; title=&quot;Мои концерты&quot;&gt;
+          &lt;MyConcerts /&gt;
+        &lt;/Tab&gt;
+        &lt;Tab eventKey=&quot;orderConfirmation&quot; title=&quot;Подтверждение заказов&quot;&gt;
+          &lt;OrderConfirmation /&gt;
+        &lt;/Tab&gt;
+        &lt;Tab eventKey=&quot;salesReport&quot; title=&quot;Отчет по продажам&quot;&gt;
+          &lt;SalesReport /&gt;
+        &lt;/Tab&gt;
+      &lt;/Tabs&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default AdminDashboard;
+
+
+</code></pre>
+<p><img alt="img_7.png" src="../img_7.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

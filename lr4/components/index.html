@@ -1,0 +1,1939 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../pages/">
+      
+      
+        <link rel="next" href="../leetcode/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>Components - Отчёт Web-программирование</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Отчёт Web-программирование" class="md-header__button md-logo" aria-label="Отчёт Web-программирование" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Отчёт Web-программирование
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Components
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Отчёт Web-программирование" class="md-nav__button md-logo" aria-label="Отчёт Web-программирование" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Отчёт Web-программирование
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/leetcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr1/task5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Задание 5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/forms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/urls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Urls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr2/leetcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/views/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Views
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/serializers/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Forms
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/admin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Admin
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/urls/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Urls
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/pr_work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practical Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lr3/leetcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Лабораторная работа №4
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Лабораторная работа №4
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Components
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Components
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Карточка концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Хедер
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Футер
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создание концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Концерты организатора
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Подтверждение заказов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Концерты для организаторов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Отчет по продажам
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../leetcode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Leetcode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Карточка концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Хедер
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Футер
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Создание концерта
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Концерты организатора
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Подтверждение заказов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Концерты для организаторов
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Отчет по продажам
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">Компоненты</h1>
+<h2 id="_2">Карточка концерта</h2>
+<pre><code class="language-js">import { formatInTimeZone } from 'date-fns-tz';
+import { ru } from 'date-fns/locale';
+
+const ConcertCard = ({ concert }) =&gt; {
+  const { title, date, time, image, id } = concert;
+
+  const timeZone = 'Europe/Moscow';
+
+  const dateObj = new Date(date);
+  const timeObj = new Date(`${date}T${time}`);
+
+  const formattedDate = formatInTimeZone(dateObj, timeZone, &quot;d MMMM&quot;, { locale: ru });
+  const formattedTime = formatInTimeZone(timeObj, timeZone, &quot;HH:mm&quot;, { locale: ru });
+
+  return (
+    &lt;a href={`/concerts/${id}`} className=&quot;card mb-4 text-decoration-none&quot; style={{ width: '20rem', cursor: 'pointer', color: 'inherit' }}&gt;
+      &lt;img
+        src={image}
+        className=&quot;card-img-top&quot;
+        alt={title}
+        style={{ width: '100%', height: '200px', objectFit: 'cover' }}
+      /&gt;
+      &lt;div className=&quot;card-body&quot;&gt;
+        &lt;h5 className=&quot;card-title&quot;&gt;{title}&lt;/h5&gt;
+        &lt;p className=&quot;card-text&quot;&gt;&lt;small&gt;{formattedDate}, {formattedTime}&lt;/small&gt;&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/a&gt;
+  );
+};
+
+export default ConcertCard;
+
+</code></pre>
+<p><img alt="img_8.png" src="../img_8.png" /></p>
+<h2 id="_3">Хедер</h2>
+<pre><code class="language-js">import React, { useContext } from &quot;react&quot;;
+import { Link, useNavigate } from &quot;react-router-dom&quot;;
+import { AuthContext } from &quot;../utils/AuthContext&quot;;
+
+const Header = () =&gt; {
+  const { userRole, isAuthenticated, logout } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogout = () =&gt; {
+    logout();
+    navigate(&quot;/login&quot;);
+  };
+
+  return (
+    &lt;nav className=&quot;navbar navbar-dark bg-dark p-3&quot;&gt;
+      &lt;div className=&quot;container d-flex justify-content-between&quot;&gt;
+        &lt;Link className=&quot;navbar-brand&quot; to=&quot;/&quot;&gt;Concert Hall&lt;/Link&gt;
+
+        {isAuthenticated ? (
+          &lt;div&gt;
+            {userRole === &quot;user&quot; ? (
+              &lt;Link className=&quot;btn btn-outline-light me-2&quot; to=&quot;/orders/my&quot;&gt;Мои заказы&lt;/Link&gt;
+            ) : (
+              &lt;Link className=&quot;btn btn-outline-light me-2&quot; to=&quot;/admin&quot;&gt;Админ-панель&lt;/Link&gt;
+            )}
+            &lt;button className=&quot;btn btn-danger&quot; onClick={handleLogout}&gt;Выйти&lt;/button&gt;
+          &lt;/div&gt;
+        ) : (
+          &lt;Link className=&quot;btn btn-outline-light&quot; to=&quot;/login&quot;&gt;Войти&lt;/Link&gt;
+        )}
+      &lt;/div&gt;
+    &lt;/nav&gt;
+  );
+};
+
+export default Header;
+</code></pre>
+<p><img alt="img_17.png" src="../img_17.png" />
+<img alt="img_9.png" src="../img_9.png" /></p>
+<h2 id="_4">Футер</h2>
+<pre><code class="language-js">import React from 'react';
+
+const Footer = () =&gt; (
+  &lt;footer className=&quot;bg-dark text-white text-center p-3 mt-4&quot;&gt;
+    &lt;p&gt;&amp;copy; 2025 Concert Hall. Все права защищены.&lt;/p&gt;
+  &lt;/footer&gt;
+);
+
+export default Footer;
+</code></pre>
+<p><img alt="img_10.png" src="../img_10.png" /></p>
+<h2 id="_5">Создание концерта</h2>
+<pre><code class="language-js">import React, { useState, useEffect } from 'react';
+import { Form, Button } from 'react-bootstrap';
+import axios from 'axios';
+
+const CreateConcert = () =&gt; {
+  const [concertDetails, setConcertDetails] = useState({
+    title: '',
+    performer: '',
+    description: '',
+    date: '',
+    time: '',
+    age_limit: '',
+    image: null, // Добавлено для фото
+  });
+
+  const [performers, setPerformers] = useState([]);
+
+  const token = localStorage.getItem('token');
+
+  useEffect(() =&gt; {
+    axios.get('http://localhost:8000/performers/', {
+      headers: token ? { Authorization: `Token ${token}` } : {},
+    })
+      .then((response) =&gt; {
+        setPerformers(response.data);
+      })
+      .catch((error) =&gt; {
+        console.error('Ошибка при получении списка исполнителей', error);
+      });
+  }, []);
+
+  const handleChange = (e) =&gt; {
+    const { name, value } = e.target;
+    setConcertDetails((prev) =&gt; ({ ...prev, [name]: value }));
+  };
+
+  const handleFileChange = (e) =&gt; {
+    const file = e.target.files[0];
+    setConcertDetails((prev) =&gt; ({ ...prev, image: file }));
+  };
+
+  const handleSubmit = (e) =&gt; {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append('title', concertDetails.title);
+    formData.append('performer', concertDetails.performer);
+    formData.append('description', concertDetails.description);
+    formData.append('date', concertDetails.date);
+    formData.append('time', concertDetails.time);
+    formData.append('age_limit', concertDetails.age_limit);
+    if (concertDetails.image) {
+      formData.append('image', concertDetails.image);
+    }
+
+    axios.post('http://localhost:8000/concerts/create/', formData, {
+      headers: {
+        Authorization: `Token ${token}`,
+        'Content-Type': 'multipart/form-data',
+      },
+    })
+      .then((response) =&gt; {
+        console.log('Концерт создан', response.data);
+      })
+      .catch((error) =&gt; {
+        console.error('Ошибка при создании концерта', error);
+      });
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;Form onSubmit={handleSubmit} className=&quot;mt-3&quot;&gt;
+        &lt;Form.Group&gt;
+          &lt;Form.Label&gt;Название концерта&lt;/Form.Label&gt;
+          &lt;Form.Control
+            type=&quot;text&quot;
+            name=&quot;title&quot;
+            value={concertDetails.title}
+            onChange={handleChange}
+          /&gt;
+        &lt;/Form.Group&gt;
+
+        {/* Выпадающий список для исполнителей */}
+        &lt;Form.Group&gt;
+          &lt;Form.Label className=&quot;mt-3&quot;&gt;Исполнитель&lt;/Form.Label&gt;
+          &lt;Form.Control
+            as=&quot;select&quot;
+            name=&quot;performer&quot;
+            value={concertDetails.performer}
+            onChange={handleChange}
+          &gt;
+            &lt;option value=&quot;&quot;&gt;Выберите исполнителя&lt;/option&gt;
+            {performers.map((performer) =&gt; (
+              &lt;option key={performer.id} value={performer.id}&gt;
+                {performer.name}
+              &lt;/option&gt;
+            ))}
+          &lt;/Form.Control&gt;
+        &lt;/Form.Group&gt;
+
+        &lt;Form.Group&gt;
+          &lt;Form.Label className=&quot;mt-3&quot;&gt;Описание&lt;/Form.Label&gt;
+          &lt;Form.Control
+            type=&quot;text&quot;
+            name=&quot;description&quot;
+            value={concertDetails.description}
+            onChange={handleChange}
+          /&gt;
+        &lt;/Form.Group&gt;
+        &lt;Form.Group&gt;
+          &lt;Form.Label className=&quot;mt-3&quot;&gt;Дата&lt;/Form.Label&gt;
+          &lt;Form.Control
+            type=&quot;date&quot;
+            name=&quot;date&quot;
+            value={concertDetails.date}
+            onChange={handleChange}
+          /&gt;
+        &lt;/Form.Group&gt;
+        &lt;Form.Group className=&quot;mt-3&quot;&gt;
+          &lt;Form.Label&gt;Время&lt;/Form.Label&gt;
+          &lt;Form.Control
+            type=&quot;time&quot;
+            name=&quot;time&quot;
+            value={concertDetails.time}
+            onChange={handleChange}
+          /&gt;
+        &lt;/Form.Group&gt;
+        &lt;Form.Group className=&quot;mt-3&quot;&gt;
+          &lt;Form.Label&gt;Возрастное ограничение&lt;/Form.Label&gt;
+          &lt;Form.Control
+            type=&quot;text&quot;
+            name=&quot;age_limit&quot;
+            value={concertDetails.age_limit}
+            onChange={handleChange}
+          /&gt;
+        &lt;/Form.Group&gt;
+
+        {/* Поле для загрузки фото */}
+        &lt;Form.Group className=&quot;mt-3&quot;&gt;
+          &lt;Form.Label&gt;Фото&lt;/Form.Label&gt;
+          &lt;Form.Control
+            type=&quot;file&quot;
+            onChange={handleFileChange}
+          /&gt;
+        &lt;/Form.Group&gt;
+
+      &lt;Button type=&quot;submit&quot; className=&quot;mt-3&quot;&gt;Создать концерт&lt;/Button&gt;
+      &lt;/Form&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default CreateConcert;
+
+</code></pre>
+<p><img alt="img_11.png" src="../img_11.png" /></p>
+<h2 id="_6">Концерты организатора</h2>
+<pre><code class="language-js">import React, { useState, useEffect } from 'react';
+import { Button, Accordion, ListGroup, Form, Modal } from 'react-bootstrap';
+import axios from 'axios';
+
+const MyConcerts = () =&gt; {
+  const [concerts, setConcerts] = useState([]);
+  const [selectedConcert, setSelectedConcert] = useState(null);
+  const [ticketName, setTicketName] = useState('');
+  const [ticketPrice, setTicketPrice] = useState('');
+  const [ticketCount, setTicketCount] = useState(1);
+  const [showModal, setShowModal] = useState(false);
+  const [currentConcertId, setCurrentConcertId] = useState(null);
+  const token = localStorage.getItem('token');
+
+  useEffect(() =&gt; {
+    axios.get('http://localhost:8000/organizer/concerts/', {
+      headers: { Authorization: `Token ${token}` },
+    })
+      .then((response) =&gt; setConcerts(response.data))
+      .catch((error) =&gt; console.error('Ошибка загрузки концертов:', error));
+  }, [token]);
+
+  const handleAddTickets = () =&gt; {
+    if (!ticketName || !ticketPrice || ticketCount &lt;= 0) {
+      alert(&quot;Пожалуйста, укажите название, цену и количество билетов больше 0.&quot;);
+      return;
+    }
+
+
+    axios.post(`http://localhost:8000/concerts/tickets/`, {
+      concert: currentConcertId,
+      name: ticketName,
+      price: ticketPrice,
+      total_quantity: ticketCount
+    }, {
+      headers: { Authorization: `Token ${token}` }
+    })
+    .then(() =&gt; {
+      alert('Билеты добавлены');
+      setTicketName('');
+      setTicketPrice('');
+      setTicketCount(1);
+      setShowModal(false);
+
+      axios.get(`http://localhost:8000/concerts/${currentConcertId}/`, {
+        headers: { Authorization: `Token ${token}` },
+      })
+      .then((response) =&gt; {
+        setConcerts((prevConcerts) =&gt; prevConcerts.map((concert) =&gt; {
+          if (concert.id === currentConcertId) {
+            return { ...concert, tickets: response.data.tickets };
+          }
+          return concert;
+        }));
+
+      })
+      .catch((error) =&gt; alert('Ошибка обновления билетов: ' + error.response.data));
+    })
+    .catch((error) =&gt; alert('Ошибка добавления билетов: ' + error.response.data));
+  };
+
+  const handleConcertClick = (concertId) =&gt; {
+    if (selectedConcert === concertId) {
+      setSelectedConcert(null);
+      setTicketName('');
+      setTicketPrice('');
+      setTicketCount(1);
+    } else {
+      setSelectedConcert(concertId);
+    }
+  };
+
+  const handleSendStatusUpdate = (concertId) =&gt; {
+    axios.post(`http://localhost:8000/concerts/${concertId}/status/`, {}, {
+      headers: { Authorization: `Token ${token}` }
+    })
+    .then(() =&gt; {
+      alert('Статус концерта изменен на &quot;Подготовлен&quot;');
+      setConcerts((prevConcerts) =&gt;
+        prevConcerts.map((concert) =&gt;
+          concert.id === concertId ? { ...concert, status: 'Подготовлен' } : concert
+        )
+      );
+    })
+    .catch((error) =&gt; alert('Ошибка при изменении статуса: ' + error.response.data));
+  };
+
+  return (
+    &lt;div&gt;
+      {concerts.length === 0 &amp;&amp; &lt;p className=&quot;mt-3&quot;&gt;Нет доступных концертов&lt;/p&gt;}
+      &lt;Accordion className=&quot;mt-3&quot;&gt;
+        {concerts.map((concert) =&gt; (
+          &lt;Accordion.Item key={concert.id} eventKey={concert.id.toString()}&gt;
+            &lt;Accordion.Header&gt;{concert.title}&lt;/Accordion.Header&gt;
+            &lt;Accordion.Body&gt;
+              &lt;p&gt;Дата: {concert.date}, Время: {concert.time}&lt;/p&gt;
+
+              {/* Отображение билетов для концерта */}
+              &lt;ListGroup className=&quot;mt-2&quot;&gt;
+                {concert.tickets &amp;&amp; concert.tickets.map((ticket) =&gt; (
+                  &lt;ListGroup.Item key={ticket.id}&gt;
+                    {ticket.name} - Цена: {ticket.price} - Количество: {ticket.total_quantity}
+                  &lt;/ListGroup.Item&gt;
+                ))}
+              &lt;/ListGroup&gt;
+
+                &lt;div className=&quot;d-flex gap-2 mt-3&quot;&gt;
+                  &lt;div className=&quot;d-flex gap-2&quot;&gt;
+                    &lt;Button onClick={() =&gt; {
+                      setCurrentConcertId(concert.id);
+                      setShowModal(true);
+                    }}&gt;Добавить билеты&lt;/Button&gt;
+                    &lt;Button onClick={() =&gt; handleSendStatusUpdate(concert.id)}&gt;Отправить&lt;/Button&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/Accordion.Body&gt;
+          &lt;/Accordion.Item&gt;
+        ))}
+      &lt;/Accordion&gt;
+
+      {/* Модальное окно для добавления билетов */}
+      &lt;Modal show={showModal} onHide={() =&gt; setShowModal(false)}&gt;
+      &lt;Modal.Header closeButton&gt;
+          &lt;Modal.Title&gt;Добавить билеты&lt;/Modal.Title&gt;
+        &lt;/Modal.Header&gt;
+        &lt;Modal.Body&gt;
+          &lt;Form&gt;
+            &lt;Form.Group&gt;
+              &lt;Form.Label&gt;Название билета&lt;/Form.Label&gt;
+              &lt;Form.Control
+                type=&quot;text&quot;
+                placeholder=&quot;Введите название билета&quot;
+                value={ticketName}
+                onChange={(e) =&gt; setTicketName(e.target.value)}
+              /&gt;
+            &lt;/Form.Group&gt;
+
+            &lt;Form.Group className=&quot;mt-2&quot;&gt;
+              &lt;Form.Label&gt;Цена билета&lt;/Form.Label&gt;
+              &lt;Form.Control
+                type=&quot;number&quot;
+                placeholder=&quot;Введите цену билета&quot;
+                value={ticketPrice}
+                onChange={(e) =&gt; setTicketPrice(e.target.value)}
+              /&gt;
+            &lt;/Form.Group&gt;
+
+            &lt;Form.Group className=&quot;mt-2&quot;&gt;
+              &lt;Form.Label&gt;Количество билетов&lt;/Form.Label&gt;
+              &lt;Form.Control
+                type=&quot;number&quot;
+                placeholder=&quot;Введите количество билетов&quot;
+                value={ticketCount}
+                onChange={(e) =&gt; setTicketCount(e.target.value)}
+              /&gt;
+            &lt;/Form.Group&gt;
+          &lt;/Form&gt;
+        &lt;/Modal.Body&gt;
+        &lt;Modal.Footer&gt;
+          &lt;Button variant=&quot;secondary&quot; onClick={() =&gt; setShowModal(false)}&gt;
+            Закрыть
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;primary&quot; onClick={handleAddTickets}&gt;
+            Добавить
+          &lt;/Button&gt;
+        &lt;/Modal.Footer&gt;
+      &lt;/Modal&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default MyConcerts;
+
+</code></pre>
+<p><img alt="img_12.png" src="../img_12.png" /></p>
+<h2 id="_7">Подтверждение заказов</h2>
+<pre><code class="language-js">import React, { useState, useEffect } from 'react';
+import { Button, ListGroup, Accordion, Badge, Row, Col } from 'react-bootstrap';
+import axios from 'axios';
+
+const OrderConfirmation = () =&gt; {
+  const [pendingOrders, setPendingOrders] = useState([]);
+  const [historyOrders, setHistoryOrders] = useState([]);
+
+  const fetchOrders = () =&gt; {
+    const token = localStorage.getItem(&quot;token&quot;);
+
+    axios.get('http://localhost:8000/orders/', {
+      headers: { Authorization: `Token ${token}` }
+    })
+      .then((response) =&gt; {
+        const pending = response.data.filter(order =&gt; order.status === &quot;pending&quot;);
+        const history = response.data.filter(order =&gt; order.status === &quot;confirmed&quot; || order.status === &quot;returned&quot;);
+
+        setPendingOrders(pending);
+        setHistoryOrders(history);
+      })
+      .catch((error) =&gt; console.error(&quot;Ошибка загрузки заказов&quot;, error));
+  };
+
+  useEffect(() =&gt; {
+    fetchOrders();
+  }, []);
+
+  const handleConfirmOrder = (orderId) =&gt; {
+    const token = localStorage.getItem(&quot;token&quot;);
+
+    axios.post(`http://localhost:8000/orders/${orderId}/confirm/`, {}, {
+      headers: { Authorization: `Token ${token}` }
+    })
+      .then(() =&gt; {
+        fetchOrders();  // Загружаем обновленные заказы
+      })
+      .catch((error) =&gt; console.error(&quot;Ошибка подтверждения заказа&quot;, error));
+  };
+
+  const handleReturnOrder = (orderId) =&gt; {
+    const token = localStorage.getItem(&quot;token&quot;);
+
+    axios.post(`http://localhost:8000/orders/${orderId}/return/`, {}, {
+      headers: { Authorization: `Token ${token}` }
+    })
+      .then(() =&gt; {
+        fetchOrders();
+      })
+      .catch((error) =&gt; console.error(&quot;Ошибка возврата заказа&quot;, error));
+  };
+
+  return (
+    &lt;div&gt;
+      &lt;ListGroup className=&quot;mt-3&quot;&gt;
+        {pendingOrders.length === 0 ? &lt;p className=&quot;mt-3&quot;&gt;Нет заказов для подтверждения&lt;/p&gt; : null}
+        {pendingOrders.map((order) =&gt; (
+          &lt;ListGroup.Item key={order.id} className=&quot;order-item&quot;&gt;
+            &lt;Row&gt;
+              &lt;Col md={8}&gt;
+                &lt;p&gt;&lt;strong&gt;{order.concert.title}&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;{order.user.username} - {order.user.email}&lt;/p&gt;
+                &lt;p&gt;{order.quantity} билетов - {order.total_price} ₽&lt;/p&gt;
+              &lt;/Col&gt;
+              &lt;Col md={4} className=&quot;text-end d-flex flex-column align-items-end justify-content-center&quot;&gt;
+                &lt;Button variant=&quot;success&quot; onClick={() =&gt; handleConfirmOrder(order.id)} style={{ width: &quot;100%&quot; }} className=&quot;mb-2&quot;&gt;
+                  Подтвердить
+                &lt;/Button&gt;
+                &lt;Button variant=&quot;danger&quot; onClick={() =&gt; handleReturnOrder(order.id)} style={{ width: &quot;100%&quot; }}&gt;
+                  Возврат
+                &lt;/Button&gt;
+              &lt;/Col&gt;
+            &lt;/Row&gt;
+          &lt;/ListGroup.Item&gt;
+        ))}
+      &lt;/ListGroup&gt;
+
+      &lt;h2 className=&quot;mt-4&quot;&gt;История заказов&lt;/h2&gt;
+      &lt;Accordion&gt;
+        &lt;Accordion.Item eventKey=&quot;0&quot;&gt;
+          &lt;Accordion.Header&gt;Показать историю заказов&lt;/Accordion.Header&gt;
+          &lt;Accordion.Body&gt;
+            &lt;ListGroup&gt;
+              {historyOrders.length === 0 ? &lt;p&gt;История заказов пуста&lt;/p&gt; : null}
+              {historyOrders.map((order) =&gt; (
+                &lt;ListGroup.Item key={order.id} className=&quot;order-item&quot;&gt;
+                  &lt;Row&gt;
+                    &lt;Col md={8}&gt;
+                      &lt;p&gt;&lt;strong&gt;{order.concert.title}&lt;/strong&gt;&lt;/p&gt;
+                      &lt;p&gt;{order.user.username} - {order.user.email}&lt;/p&gt;
+                      &lt;p&gt;{order.quantity} билетов - {order.total_price} ₽&lt;/p&gt;
+                    &lt;/Col&gt;
+                    &lt;Col md={4} className=&quot;text-end d-flex align-items-center justify-content-end&quot;&gt;
+                      &lt;Badge className=&quot;orders-bd&quot; bg={order.status === &quot;confirmed&quot; ? &quot;success&quot; : &quot;danger&quot;}&gt;
+                        {order.status === &quot;confirmed&quot; ? &quot;Подтвержден&quot; : &quot;Возвращен&quot;}
+                      &lt;/Badge&gt;
+                    &lt;/Col&gt;
+                  &lt;/Row&gt;
+                &lt;/ListGroup.Item&gt;
+              ))}
+            &lt;/ListGroup&gt;
+          &lt;/Accordion.Body&gt;
+        &lt;/Accordion.Item&gt;
+      &lt;/Accordion&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default OrderConfirmation;
+
+
+</code></pre>
+<p><img alt="img_13.png" src="../img_13.png" />
+<img alt="img_14.png" src="../img_14.png" /></p>
+<h2 id="_8">Концерты для организаторов</h2>
+<pre><code class="language-js">import React, { useState, useEffect } from &quot;react&quot;;
+import { Button, Card, Modal, Form } from &quot;react-bootstrap&quot;;
+import axios from &quot;axios&quot;;
+
+const Organization = () =&gt; {
+  const [concerts, setConcerts] = useState([]);
+  const [editConcert, setEditConcert] = useState(null);
+  const [performers, setPerformers] = useState([]);
+  const [showModal, setShowModal] = useState(false);
+  const token = localStorage.getItem(&quot;token&quot;);
+
+  useEffect(() =&gt; {
+    fetchConcerts();
+    fetchPerformers();
+  }, []);
+
+  const fetchConcerts = () =&gt; {
+    axios
+      .get(&quot;http://localhost:8000/concerts/&quot;, {
+        headers: { Authorization: `Token ${token}` },
+      })
+      .then((response) =&gt; {
+        const filteredConcerts = response.data.filter(
+          (concert) =&gt; concert.status === &quot;created&quot;
+        );
+        setConcerts(filteredConcerts);
+      })
+      .catch((error) =&gt; console.error(&quot;Ошибка загрузки концертов:&quot;, error));
+  };
+
+  const fetchPerformers = () =&gt; {
+    axios
+      .get(&quot;http://localhost:8000/performers/&quot;, {
+        headers: { Authorization: `Token ${token}` },
+      })
+      .then((response) =&gt; {
+        setPerformers(response.data);
+      })
+      .catch((error) =&gt; console.error(&quot;Ошибка при получении списка исполнителей&quot;, error));
+  };
+
+  const handleTakeInWork = (concertId) =&gt; {
+    axios
+      .post(`http://localhost:8000/organizer/assign/${concertId}/`, {}, {
+        headers: { Authorization: `Token ${token}` },
+      })
+      .then(() =&gt; {
+        setConcerts((prev) =&gt; prev.filter((concert) =&gt; concert.id !== concertId));
+        alert(&quot;Концерт успешно взят в работу!&quot;);
+      })
+      .catch((error) =&gt; alert(&quot;Ошибка при назначении концерта&quot;));
+  };
+
+  const handleDeleteConcert = (concertId) =&gt; {
+    axios
+      .delete(`http://localhost:8000/concerts/${concertId}/delete/`, {
+        headers: { Authorization: `Token ${token}` },
+      })
+      .then(() =&gt; {
+        setConcerts((prev) =&gt; prev.filter((concert) =&gt; concert.id !== concertId));
+        alert(&quot;Концерт удален&quot;);
+      })
+      .catch((error) =&gt; alert(&quot;Ошибка при удалении концерта&quot;));
+  };
+
+  const handleEditConcert = (concert) =&gt; {
+    setEditConcert(concert);
+    setShowModal(true);
+  };
+
+  const handleSaveConcert = () =&gt; {
+    const formData = new FormData();
+    formData.append(&quot;title&quot;, editConcert.title);
+    formData.append(&quot;description&quot;, editConcert.description);
+    formData.append(&quot;performer&quot;, editConcert.performer);
+    formData.append(&quot;image&quot;, editConcert.image);
+
+    axios
+      .patch(`http://localhost:8000/concerts/${editConcert.id}/update/`, formData, {
+        headers: {
+          Authorization: `Token ${token}`,
+          &quot;Content-Type&quot;: &quot;multipart/form-data&quot;,  // Важный момент
+        },
+      })
+      .then(() =&gt; {
+        fetchConcerts();
+        setShowModal(false);
+      })
+      .catch((error) =&gt; alert(&quot;Ошибка при обновлении концерта&quot;));
+  };
+
+  const handleCreateConcert = (newConcert) =&gt; {
+    const formData = new FormData();
+    formData.append(&quot;title&quot;, newConcert.title);
+    formData.append(&quot;description&quot;, newConcert.description);
+    formData.append(&quot;performer&quot;, newConcert.performer);
+    formData.append(&quot;image&quot;, newConcert.image);
+
+    axios
+      .post(&quot;http://localhost:8000/concerts/create/&quot;, formData, {
+        headers: {
+          Authorization: `Token ${token}`,
+          &quot;Content-Type&quot;: &quot;multipart/form-data&quot;,
+        },
+      })
+      .then((response) =&gt; {
+        setConcerts((prevConcerts) =&gt; [...prevConcerts, response.data]);
+        alert(&quot;Концерт успешно создан!&quot;);
+      })
+      .catch((error) =&gt; alert(&quot;Ошибка при создании концерта&quot;));
+  };
+
+  return (
+    &lt;div&gt;
+      {concerts.length === 0 ? &lt;p className=&quot;mt-3&quot;&gt;Нет доступных концертов&lt;/p&gt; : null}
+      {concerts.map((concert) =&gt; (
+        &lt;Card key={concert.id} className=&quot;mt-3&quot;&gt;
+          &lt;Card.Body &gt;
+            &lt;Card.Title&gt;{concert.title}&lt;/Card.Title&gt;
+            &lt;Card.Text&gt;{concert.description}&lt;/Card.Text&gt;
+            &lt;Button variant=&quot;success&quot; onClick={() =&gt; handleTakeInWork(concert.id)}&gt;
+              Взять в работу
+            &lt;/Button&gt;{&quot; &quot;}
+            &lt;Button variant=&quot;warning&quot; onClick={() =&gt; handleEditConcert(concert)}&gt;
+              Редактировать
+            &lt;/Button&gt;{&quot; &quot;}
+            &lt;Button variant=&quot;danger&quot; onClick={() =&gt; handleDeleteConcert(concert.id)}&gt;
+              Удалить
+            &lt;/Button&gt;
+          &lt;/Card.Body&gt;
+        &lt;/Card&gt;
+      ))}
+
+      {/* Модальное окно редактирования концерта */}
+      &lt;Modal show={showModal} onHide={() =&gt; setShowModal(false)}&gt;
+        &lt;Modal.Header closeButton&gt;
+          &lt;Modal.Title&gt;Редактировать концерт&lt;/Modal.Title&gt;
+        &lt;/Modal.Header&gt;
+        &lt;Modal.Body&gt;
+          &lt;Form&gt;
+            &lt;Form.Group className=&quot;mb-3&quot;&gt;
+              &lt;Form.Label&gt;Название&lt;/Form.Label&gt;
+              &lt;Form.Control
+                type=&quot;text&quot;
+                value={editConcert?.title || &quot;&quot;}
+                onChange={(e) =&gt; setEditConcert({ ...editConcert, title: e.target.value })}
+              /&gt;
+            &lt;/Form.Group&gt;
+            &lt;Form.Group className=&quot;mb-3&quot;&gt;
+              &lt;Form.Label&gt;Описание&lt;/Form.Label&gt;
+              &lt;Form.Control
+                as=&quot;textarea&quot;
+                rows={3}
+                value={editConcert?.description || &quot;&quot;}
+                onChange={(e) =&gt; setEditConcert({ ...editConcert, description: e.target.value })}
+              /&gt;
+            &lt;/Form.Group&gt;
+            &lt;Form.Group className=&quot;mb-3&quot;&gt;
+              &lt;Form.Label&gt;Исполнитель&lt;/Form.Label&gt;
+              &lt;Form.Control
+                as=&quot;select&quot;
+                value={editConcert?.performer || &quot;&quot;}
+                onChange={(e) =&gt; setEditConcert({ ...editConcert, performer: e.target.value })}
+              &gt;
+                &lt;option value=&quot;&quot;&gt;Выберите исполнителя&lt;/option&gt;
+                {performers.map((performer) =&gt; (
+                  &lt;option key={performer.id} value={performer.id}&gt;
+                    {performer.name}
+                  &lt;/option&gt;
+                ))}
+              &lt;/Form.Control&gt;
+            &lt;/Form.Group&gt;
+            &lt;Form.Group className=&quot;mb-3&quot;&gt;
+              &lt;Form.Label&gt;Фото&lt;/Form.Label&gt;
+              &lt;Form.Control
+                type=&quot;file&quot;
+                onChange={(e) =&gt; setEditConcert({ ...editConcert, image: e.target.files[0] })}
+              /&gt;
+            &lt;/Form.Group&gt;
+          &lt;/Form&gt;
+        &lt;/Modal.Body&gt;
+        &lt;Modal.Footer&gt;
+          &lt;Button variant=&quot;secondary&quot; onClick={() =&gt; setShowModal(false)}&gt;
+            Отмена
+          &lt;/Button&gt;
+          &lt;Button variant=&quot;primary&quot; onClick={handleSaveConcert}&gt;
+            Сохранить
+          &lt;/Button&gt;
+        &lt;/Modal.Footer&gt;
+      &lt;/Modal&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default Organization;
+</code></pre>
+<p><img alt="img_15.png" src="../img_15.png" /></p>
+<h2 id="_9">Отчет по продажам</h2>
+<pre><code class="language-js">import React, { useState, useEffect } from &quot;react&quot;;
+import axios from &quot;axios&quot;;
+
+const SalesReport = () =&gt; {
+  const [report, setReport] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =&gt; {
+    const fetchReport = async () =&gt; {
+      try {
+        const response = await axios.get(&quot;http://localhost:8000/report/&quot;, {
+          headers: { Authorization: `Token ${localStorage.getItem(&quot;token&quot;)}` },
+        });
+        setReport(response.data);
+      } catch (error) {
+        console.error(&quot;Ошибка при загрузке отчета:&quot;, error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchReport();
+  }, []);
+
+  if (loading) return &lt;div className=&quot;container mt-4&quot;&gt;Загрузка отчета...&lt;/div&gt;;
+
+  const totalRevenue = report.reduce((acc, concert) =&gt; acc + concert.total_revenue, 0);
+
+  return (
+    &lt;div className=&quot;container mt-4&quot;&gt;
+      &lt;table className=&quot;table&quot;&gt;
+        &lt;thead&gt;
+          &lt;tr&gt;
+            &lt;th&gt;#&lt;/th&gt;
+            &lt;th&gt;Концерт&lt;/th&gt;
+            &lt;th&gt;Дата&lt;/th&gt;
+            &lt;th&gt;Продано билетов&lt;/th&gt;
+            &lt;th&gt;Выручка (₽)&lt;/th&gt;
+          &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+          {report.map((concert, index) =&gt; (
+            &lt;tr key={concert.concert_id}&gt;
+              &lt;td&gt;{index + 1}&lt;/td&gt;
+              &lt;td&gt;{concert.concert_title}&lt;/td&gt;
+              &lt;td&gt;{new Date(concert.date).toLocaleDateString()}&lt;/td&gt;
+              &lt;td&gt;{concert.tickets_sold}&lt;/td&gt;
+              &lt;td&gt;{concert.total_revenue.toLocaleString()} ₽&lt;/td&gt;
+            &lt;/tr&gt;
+          ))}
+        &lt;/tbody&gt;
+      &lt;/table&gt;
+
+      &lt;div className=&quot;mt-3&quot;&gt;
+        &lt;strong&gt;Общая выручка: &lt;/strong&gt;
+        {totalRevenue.toLocaleString()} ₽
+      &lt;/div&gt;
+    &lt;/div&gt;
+  );
+};
+
+export default SalesReport;
+
+</code></pre>
+<p><img alt="img_16.png" src="../img_16.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
